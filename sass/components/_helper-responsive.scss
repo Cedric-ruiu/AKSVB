@@ -1,0 +1,42 @@
+/* ==========================================================================
+   RESPONSIVE HELPER
+   ========================================================================== */
+
+/* IF USE PURECSS */
+//$media-mobile-min: 767px !default;
+$media-mobile-max: 767px !default;
+$media-tablet-min: 768px !default;
+$media-tablet-max: 1024px !default;
+$media-desktop-min: 1025px !default;
+
+@mixin respond-to($media) {
+  @if $media == mini-mobile {
+    @media only screen and (max-width: $media-mini-mobile-max) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $media-mobile-max) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) { @content; }
+  }
+  @else if $media == mobile-tablet {
+    @media only screen and (max-width: $media-tablet-max) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $media-desktop-min) { @content; }
+  }
+  @else if $media == tablet-desktop {
+    @media only screen and (min-width: $media-tablet-min) { @content; }
+  }
+}
+
+/* Use like :
+.profile-pic {
+    float: left;
+    width: 250px;
+    @include respond-to(mobile) { width: 100% ;}
+    @include respond-to(tablet) { width: 125px; }
+    @include respond-to(mobile-tablet) { width: 125px; }
+    @include respond-to(desktop) { float: none; }
+}
+*/

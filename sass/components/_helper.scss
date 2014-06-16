@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Helper classes from HTML5 BoilerPlate
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+    &:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%; 
+    }
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   MY Helper classes (Several taken from Twitter Bootstrap 2.2.2)
+   ========================================================================== */
+
+.center *{text-align: center;}
+
+.clear{clear: both;}
+
+.show { display: block; }
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.affix { position: fixed; }
+
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.only-print{
+    @extend .hidden;
+}
+
+/* Alignement de texte */
+.aleft    { text-align: left; }
+.acenter  { text-align: center; }
+.aright   { text-align: right; }
+.ajustify { text-align: justify; }
+
+/* Capitales et petites capitales */
+.caps       { text-transform: uppercase; }
+.small-caps { text-transform: small-caps; }
+
+@mixin bloc-absolute(){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+%bloc-absolute-tl{
+    @include bloc-absolute;
+    top: 0; left: 0;
+}
+
+%bloc-absolute-tr{
+    @include bloc-absolute;
+    top: 0; right: 0;
+}
+
+%bloc-absolute-bl{
+    @include bloc-absolute;
+    bottom: 0; left: 0;
+}
+
+%bloc-absolute-br{
+    @include bloc-absolute;
+    bottom: 0; right: 0;
+}
+
+/* include image path & dimension */
+@mixin image($name){
+    background: image-url($name);
+    width: image-width($name);
+    height: image-height($name);
+}
+@mixin image-s8($name){
+    @include general-8-sprite($name);
+    width: general-8-sprite-width($name);
+    height: general-8-sprite-height($name);
+}
+@mixin image-s24($name){
+    @include general-24-sprite($name);
+    width: general-24-sprite-width($name);
+    height: general-24-sprite-height($name);
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
