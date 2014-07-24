@@ -1,29 +1,235 @@
 @import 'compass';
- 
-//CHOOSE ONLY ONE : normalize+unsemantic OR purecss
-/*
-@import 'components/normalize-v2';
-@import 'components/unsemantic/unsemantic-grid-responsive-tablet-no-ie7';
-*/
-@import 'components/purecss/grids-min.scss';
-@import 'components/purecss/base-min.scss';
-@import 'components/purecss/buttons-min.scss';
-@import 'components/purecss/forms-min.scss';
-@import 'components/purecss/menus-min.scss';
-@import 'components/purecss/tables-min.scss';
+$general-layout:smart;
+@import "general/*.png";
+@import 'components/ceaser-easing'; /* http://easings.net */
 
+@import 'components/normalize';
+@import 'components/var';
+@import 'components/helper';
 
-/*$general-8-layout:smart;
-@import "general-8/*.png";
-$general-24-layout:smart;
-@import "general-24/*.png";*/
 
 @import 'components/print';
-@import 'components/helper';
-@import 'components/helper-responsive';
 @import 'components/layout';
+@import 'components/header';
+@import 'components/footer';
+
+
+/* ==========================================================================
+   TRANSITIONS THEME
+   ========================================================================== */
+
+%transition-bg{
+    @include transition(background-color 0.1s linear);
+}
 
 
 /* ==========================================================================
    PAGES OBJECTS
    ========================================================================== */
+
+.slideshow{
+    position: relative;
+    overflow: auto;
+    @include respond-to(mobiles) { height: 300px; }
+    @include respond-to(tablet) { height: 500px; }
+    @include respond-to(desktop) { height: 620px; }
+    width: 100%;
+    color: $colorw;
+    background-color: #000;
+
+    .slide{ 
+        position:relative;
+        height: 100%; 
+    }
+
+    .slide-img{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-repeat: none;
+        @include background-size(cover);
+        
+        .lt-ie9 &{ background-size: 100%; }
+    }
+
+    .slide-content{ 
+        position: relative; 
+        text-align: center;
+        color: #fff;
+    }
+
+    h1{
+        color: #fff;
+
+        @include respond-to(minimobile) {
+            margin: 50px 0 15px 0;
+            padding: 0;
+            font-size: 30px;
+            line-height: 1em;
+        }
+        @include respond-to(mobile) {
+            margin: 50px 0 0 0;
+            font-size: 40px;
+            //line-height: 1em;
+        }
+        @include respond-to(tablet) {
+            margin: 120px 0 0 0;
+            font-size: 60px; 
+            //line-height: 1.05em;
+        }
+        @include respond-to(desktop) { 
+            margin: 160px 0 0 0;
+            font-size: 80px;
+            //line-height: 1.1em;
+        }
+        @include respond-to(mobile-desktop) { 
+            padding: 0 60px;
+        }
+    }
+
+    h2{
+        color: #ffffff;
+        margin: 5px 0;
+
+        @include respond-to(minimobile) { 
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+        }
+        @include respond-to(mobile) { font-size: 20px; }
+        @include respond-to(tablet) { font-size: 20px; }
+        @include respond-to(desktop) { font-size: 30px; }
+        @include respond-to(mobile-desktop) { padding: 0 60px; }
+    }
+
+    p{
+        margin: 0;
+        color: #fff;
+        
+        @include respond-to(minimobile) { 
+            padding: 0;
+            font-size: 15px;
+        }
+        @include respond-to(mobile) { font-size: 20px; }
+        @include respond-to(tablet) { font-size: 20px; }
+        @include respond-to(desktop) { font-size: 30px; }
+        @include respond-to(mobile-desktop) { padding: 0 60px; }
+    }
+
+    h1.shadow, h2.shadow, p.shadow, .shadow h1, .shadow h2, .shadow p{
+        @include text-shadow(#000 1px 1px 4px, #000 2px 2px 4px, #000 3px 3px 4px);
+    }
+    .shadow .slide-img{
+        @include opacity(0.6);
+    }
+}
+
+.bx-wrapper{
+    position: relative;
+}
+
+.bx-controls{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    overflow: visible;
+
+    .bx-controls-direction{ 
+        position: absolute;
+        width: 100%;
+        height: 0;
+        @include respond-to(minimobile) { display: none; }
+    }
+
+    a.bx-prev, a.bx-next{
+        position: absolute;
+        display: block;
+        height: 60px;
+        width: 60px;
+        overflow: visible;
+        background-color: $color1;
+        @extend .hide-text;
+        @include opacity(1);
+        @include transition(opacity 0.2s linear);
+
+        @include respond-to(desktop) { top: 280px; }
+        @include respond-to(tablet) { top: 220px; }
+        @include respond-to(mobile) { top: 120px; }
+
+        &:hover, &.active{ @include opacity(0.8); }
+    }
+
+    a.bx-prev{
+        left: 0;
+        @include arrow(left, #000, 22px, 8px, 17px, 21px);
+    }
+
+    a.bx-next{ 
+        right: 0;
+        @include arrow(right, #000, 22px, 8px, 17px, 21px);
+    }
+
+    .bx-pager{
+        height: 0;
+        overflow: visible;
+        position: absolute;
+        text-align: right;
+        width: 100%;
+
+        @include respond-to(mobiles) { 
+            top: 246px; 
+            right: 20px;
+        }
+        @include respond-to(tablet) { 
+            top: 446px; 
+            right: 20px;
+        }
+        @include respond-to(desktop) {
+            top: 566px; 
+            right: 20px;
+        }
+    }
+
+    .bx-pager-item{
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+
+        & + .bx-pager-item{
+            margin-left: 5px;
+        }
+    }
+
+    a.bx-pager-link{
+        @extend .hide-text;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 1px solid $color1;
+        @include border-radius(3px);
+        @include box-sizing(border-box);
+        @extend %transition-bg;
+        
+        &:hover{ background-color: rgba($color1, 0.5); }
+        &.active{ background-color: $color1; }
+    }
+}
+
+/*.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(images/bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}*/

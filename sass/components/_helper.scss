@@ -1,3 +1,21 @@
+/*
+--DRAFT-- É
+@include selection($color1, $colorw);
+%draft{
+    @include box-sizing(border-box);
+    @include box-shadow(rgba(0,0,0,0.7) 0px -6px 5px);  @include box-shadow(inset black 5px 0px 7px -7px);
+    @extend %bloc-absolute-tl;
+    @extend .clearfix;
+    @extend .font-regular;
+    @include border-radius(3px);
+    @include transition(background-color 0.2s linear);
+    @include background(image-url("logo-small.png") no-repeat 0 0 transparent);
+    width: image-width("logo-small.png");
+    @include mysprite(picto-search-min);
+    margin-top: - general-24-sprite-height(picto-search-min) / 2;
+}*/
+
+
 /* ==========================================================================
    Helper classes from HTML5 BoilerPlate
    ========================================================================== */
@@ -42,14 +60,6 @@
 
 .invisible { visibility: hidden; }
 
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
-    line-height: 0;
-}
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
@@ -91,7 +101,8 @@
 }
 
 .only-print{
-    @extend .hidden;
+    display: none !important;
+    visibility: hidden;
 }
 
 /* Alignement de texte */
@@ -101,7 +112,7 @@
 .ajustify { text-align: justify; }
 
 /* Capitales et petites capitales */
-.caps       { text-transform: uppercase; }
+.uppercase  { text-transform: uppercase; }
 .small-caps { text-transform: small-caps; }
 
 @mixin bloc-absolute(){
@@ -132,19 +143,15 @@
 
 /* include image path & dimension */
 @mixin image($name){
-    background: image-url($name);
+    background: image-url($name) no-repeat 0 0 transparent;
     width: image-width($name);
     height: image-height($name);
 }
-@mixin image-s8($name){
-    @include general-8-sprite($name);
-    width: general-8-sprite-width($name);
-    height: general-8-sprite-height($name);
-}
-@mixin image-s24($name){
-    @include general-24-sprite($name);
-    width: general-24-sprite-width($name);
-    height: general-24-sprite-height($name);
+
+@mixin mysprite($name){
+    @include general-sprite($name);
+    width: general-sprite-width($name);
+    height: general-sprite-height($name);
 }
 
 @mixin placeholder {
@@ -162,5 +169,226 @@
 
     &:-ms-input-placeholder {
         @content;
+    }
+}
+
+@mixin selection($background, $color) {
+    ::-moz-selection { /* Gecko */
+        background: $background;
+        color: $color;
+    }
+
+    ::selection {
+        background: $background;
+        color: $color;
+    }
+}
+
+@mixin arrow($direction, $color, $width, $height, $distance-width, $distance-height){
+    
+    &:before, &:after{
+        position: absolute;
+        content: " ";
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        
+        @if ($direction == 'top'){
+            top: $distance-height;
+        }
+        @else if ($direction == 'bottom'){
+            bottom: $distance-height;
+        }
+        @else if ($direction == 'left'){
+            left: $distance-width;
+        }
+        @else if ($direction == 'right'){
+            right: $distance-width;
+        }
+    }
+
+    @if ($direction == 'top'){
+        &:before{
+            @include rotate(45deg);
+            right: $distance-width;
+        }
+        &:after{
+            @include rotate(-45deg);
+            left: $distance-width;
+        }
+    }
+    @else if ($direction == 'bottom'){
+        &:before{
+            @include rotate(-45deg);
+            right: $distance-width;
+        }
+        &:after{
+            @include rotate(45deg);
+            left: $distance-width;
+        }
+    }
+    @else if ($direction == 'left'){
+        &:before{
+            @include rotate(-45deg);
+            top: $distance-height;
+        }
+        &:after{
+            @include rotate(45deg);
+            bottom: $distance-height;
+        }
+    }
+    @else if ($direction == 'right'){
+        &:before{
+            @include rotate(45deg);
+            top: $distance-height;
+        }
+        &:after{
+            @include rotate(-45deg);
+            bottom: $distance-height;
+        }
+    }
+}
+
+
+/* 
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: top, bottom, left, right, topleft, topright, bottomleft, bottomright
+*/
+@mixin triangle($direction, $color: #222, $height: 6px, $width-left: $height, $width-right: $width-left){
+    position: absolute;
+    display: block;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-style: solid;
+    @if ($direction == 'top'){
+        border-width: 0 $width-right $height $width-left;
+        border-color: transparent transparent $color transparent;
+    }
+    @else if ($direction == 'bottom'){
+        border-width: $height $width-right 0 $width-left;
+        border-color: $color transparent transparent transparent;
+    }
+    @else if ($direction == 'left'){
+        border-width: $width-right $height $width-left 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @else if ($direction == 'right'){
+        border-width: $width-right 0 $width-left $height;
+        border-color: transparent transparent transparent $color;
+    }
+    @else if ($direction == 'topleft'){
+        border-width: $height $width-left 0 0;
+        border-color: $color transparent transparent transparent;
+    }
+    @else if ($direction == 'topright'){
+        border-width: 0 $width-left $height 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @else if ($direction == 'bottomleft'){
+        border-width: $height 0 0 $width-left;
+        border-color: transparent transparent transparent $color;
+    }
+    @else if ($direction == 'bottomright'){
+        border-width: 0 0 $height $width-left;
+        border-color: transparent transparent $color transparent;
+    }
+}
+
+%currency {
+    position: relative;
+    &:before {
+        content: '$';
+        position: relative;
+        left: 0;
+    }
+}
+.USD %currency:before { content: '$'; }
+.EUR %currency:before { content: '\20AC'; } // must escape the html entities for each currency symbol
+.ILS %currency:before { content: '\20AA'; }
+.GBP %currency:before { content: '\00A3'; }
+
+@mixin ghostVerticalAlign(){
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; width: .1px;
+    }
+}
+
+@mixin truncateText($overflow: ellipsis){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+    // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+    -webkit-animation: $name $duration $iterations $timing-function $delay;
+    -moz-animation: $name $duration $iterations $timing-function $delay;
+    -o-animation: $name $duration $iterations $timing-function $delay;
+    animation: $name $duration $iterations $timing-function $delay;
+}
+
+%enable-gpu{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE HELPER
+   ========================================================================== */
+
+/* Use like : @include respond-to(mobile) { width: 100% ;} */
+@mixin respond-to($media) {
+    @if $media == minimobile {
+        @media only screen and (max-width: $media-minimobile-max) { @content; }
+    }
+    @else if $media == mobile {
+        @media only screen and (min-width: $media-mobile-min) and (max-width: $media-mobile-max) { @content; }
+    }
+    @else if $media == mobiles {
+        @media only screen and (max-width: $media-mobile-max) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) { @content; }
+    }
+    @else if $media == mobile-tablet {
+        @media only screen and (min-width: $media-mobile-min) and (max-width: $media-tablet-max) { @content; }
+    }
+    @else if $media == mobility {
+        @media only screen and (max-width: $media-tablet-max) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: $media-desktop-min) { @content; }
+    }
+    @else if $media == tablet-desktop {
+        @media only screen and (min-width: $media-tablet-min) { @content; }
+    }
+    @else if $media == mobile-desktop {
+        @media only screen and (min-width: $media-mobile-min) { @content; }
+    }
+}
+
+@include respond-to(minimobile) { 
+    .hide-on-minimobile{
+        display: none !important;
+    }
+}
+
+@include respond-to(mobiles) { 
+    .hide-on-mobiles{
+        display: none !important;
+    }
+}
+
+@include respond-to(mobility) { 
+    .hide-on-mobility{
+        display: none !important;
     }
 }

@@ -1,98 +1,8 @@
 /* ==========================================================================
-   Typo
-   ========================================================================== */
-
-/*
-@font-face {
-    font-family: 'LeagueGothicRegular';
-    src: url('../fonts/LeagueGothic-Regular-webfont.eot');
-    src: url('../fonts/LeagueGothic-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/LeagueGothic-Regular-webfont.woff') format('woff'),
-         url('../fonts/LeagueGothic-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-// force to use svg in chrome to fix antialiasing
-@media screen and (-webkit-min-device-pixel-ratio:0)
-{
-    @font-face {
-        font-family: 'LeagueGothicRegular';
-        src: url('../fonts/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular') format('svg');
-    }
-}
-*/
-
-
-/* ==========================================================================
-   VARIABLES & MIXINS
-   ========================================================================== */
-
-/* Typography */
-$font-regular: 'Crimson Text', Helvetica, Arial, sans-serif;
-$font-bold:    'Crimson Text', Helvetica, Arial, sans-serif;
-$font-large:   'LeagueGothicRegular', Helvetica, Arial, sans-serif;
-
-.font-regular{ font-family: $font-regular; }
-.font-bold{ font-family: $font-bold; }
-.font-large{ font-family: $font-large; }
-
-/* color theme */
-$colorw:#fff;    // WHITE
-$colorb:#4d4d4f; // BLACK
-$color1:#545454; // Primary color
-$color2:#7247b1; // Secondary color
-$color3:#ffce03; // Thirty color
-$color0:#fff;    // Title color
-
-/* Dimensions */
-$container-width: 800px;
-$header-height: 123px;
-$footer-height: 40px;
-$menu-height: 33px;
-
-
-/* ==========================================================================
-   LAYOUT
-   ========================================================================== */
-   
-.layout{ 
-    position: relative;
-    background-color: $colorw;
-    overflow: hidden;
-}
-
-.content{
-    position: relative;
-    max-width: $container-width;
-    margin: 0 auto 50px auto;
-    padding: 0 2em;
-}
-
-h1, h2, h3, li, p, input[type="text"], textarea{ @extend .font-regular; }
-
-
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
-
-.menu-header{
-    li.active a{
-        color: #000;
-    }
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
-/* ==========================================================================
    FORM (reset)
    ========================================================================== */
 
-input[type="text"], input[type="password"], input[type="submit"], textarea{
+input, textarea{
     outline: none;
     margin: 0 0 20px 0;
     padding: 0;
@@ -100,6 +10,169 @@ input[type="text"], input[type="password"], input[type="submit"], textarea{
     -webkit-focus-ring-color: none;
     @include border-radius(0);
     &:focus{ outline: none; }
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+html, body{
+    height: 100%;
+}
+
+body{
+    color: $colorb;
+    font-size: 16px;
+    @extend .font-regular;
+}
+ 
+.layout{ 
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    //margin-bottom: - $footer-height;
+    overflow: hidden;
+    background-color: $colorw;
+}
+
+a{
+    color: $color2;
+    &:hover{ text-decoration: underline; }
+}
+
+h1{
+    @extend .font-large;
+    font-size: 50px;
+    color: $color2;
+}
+
+h2{
+    @extend .font-bold;
+    font-size: 30px;
+    color: #000;
+}
+
+input, textarea{
+    position: relative;
+    width: 100%;
+    border: 0;
+    @include border-radius(3px);
+    @include box-sizing(border-box);
+}
+
+input[type="text"], input[type="email"]{
+    height: 40px;
+    padding: 0 20px;
+    background-color: $colorw;
+}
+
+input[type="submit"]{
+    height: 40px;
+    background-color: #000;
+    color: $color2;
+    @extend %transition-bg;
+
+    &:hover{
+        background-color: rgba(#000, 0.8);
+    }
+
+    &:active{
+        background-color: $colorw;
+    }
+
+}
+
+textarea{
+    height: 150px;
+    padding: 20px 15px;
+    background-color: $colorw;
+}
+
+
+/* ==========================================================================
+   GENERAL COMPONENTS
+   ========================================================================== */
+
+.logo-aksvb-y{
+    position: relative;
+    @include mysprite(aksvb-logo-y);
+}
+
+.logo-aksvb-b{
+    position: relative;
+    @include mysprite(aksvb-logo-b);
+}
+
+a.headline, .headline{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    .title{
+        @extend .font-title;
+        
+        @include respond-to(minimobile) {
+            margin-left: 54px;
+            margin-top: 14px;
+            font-size: 13.79px;
+        }
+        @include respond-to(mobile) {
+            margin-left: 90px;
+            margin-top: 25px;
+            font-size: 22px;
+        }
+        @include respond-to(tablet-desktop) {
+            margin-left: 90px;
+            margin-top: 21px;
+            font-size: 27.03px;
+        }
+    }
+
+    .subtitle{
+        @extend .font-subtitle;
+        text-align: left;
+
+        @include respond-to(minimobile) {
+            margin: -3px 0 0 54px;
+            font-size: 8.78px;
+        }
+        @include respond-to(mobile) {
+            margin: -7px 0 0 90px;
+            font-size: 14px;
+        }
+        @include respond-to(tablet-desktop) {
+            margin: -7px 0 0 90px;
+            font-size: 18.02;
+        }
+    }
+
+    .logo-aksvb-y, .logo-aksvb-b{
+        float: left;
+        display: inline-block;
+
+        @include respond-to(minimobile) {
+            margin: 10px -54px 0 0;
+        }
+        @include respond-to(mobile-desktop) {
+            margin: 10px -90px 0 0;
+        }
+    }
+
+
+
+    @include respond-to(minimobile) {
+        .logo-aksvb-y{
+            @include mysprite(aksvb-logo-min-y);
+        }
+
+        .logo-aksvb-b{
+            @include mysprite(aksvb-logo-min-b);
+        }
+    }
+
+
 }
 
 

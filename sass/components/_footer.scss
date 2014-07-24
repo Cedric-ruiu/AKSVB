@@ -1,0 +1,166 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+   
+.footer{
+    position: relative;
+    width: 100%;
+    //height: $footer-height;
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+    z-index: 50;
+}
+
+.contact{
+    position: relative;
+    width: 100%;
+    background-color: $color1;
+    text-align: center;
+    @include box-shadow(rgba(0,0,0,0.8) 0 6px 5px -3px);
+    z-index: 80;
+    
+    p{margin: 0;}
+
+    input[type="submit"]{ 
+        display: inline-block;
+        margin-bottom: 40px;
+        padding: 10px 15px;
+        width: auto;
+    }
+
+    .headline{
+        .logo-aksvb-b{ margin: 40px -90px 0 0; }
+        .title{ margin-top: 51px; }
+    }
+
+    .form{ margin-top: 40px; }
+}
+
+.maps{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    @include box-shadow(rgba(0,0,0,0.8) 0 0 5px 2px);
+    
+    .info {
+        img{ float:left;margin:0 10px 15px 0; }
+        p{ margin:0; }
+    }
+}
+
+.informations{
+    position: relative;
+    /*height: 233px;*/
+    width: 100%;
+    @extend .clearfix;
+
+    @include respond-to(mobiles) {
+        text-align: center;
+        p{ 
+            margin: 0;
+
+            &:last-child{ margin: 3px 0 40px 0; }
+        }
+    }
+
+    
+    p{ 
+        margin: 0;
+
+        @include respond-to(mobiles) {
+            &:last-child{ margin: 3px 0 40px 0; }
+        }
+    } 
+
+    img{
+        position: relative;
+
+        @include respond-to(mobiles) {
+            display: block;
+            margin: -20px auto 8px;
+        }
+        
+        @include respond-to(tablet-desktop) {
+            float: left;
+            margin: -20px 10px 8px 0;
+        }
+    }
+
+    .line{ 
+        @include respond-to(tablet-desktop) { margin-bottom: 40px; }
+        
+        &:first-child{ margin-top: 50px; }
+    }
+
+    .ffwushu{
+        text-transform: uppercase;
+        font-size: 12.09px;
+
+        @include respond-to(mobiles) {
+            display: inline-block;
+            max-width: 300px;
+        }
+    }
+}
+
+.credits{
+    position: relative;
+    height: 112px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    @extend .clearfix;
+
+    p{ margin: 35px 0 0 0; }
+
+    .opla-logo{
+        position: relative;
+        display: inline-block;
+        top: 4px;
+        @include mysprite('opla-logo');
+    }
+
+    .top{
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        @include triangle(top, $colorw, 43px);
+        @include transition(all 0.5s ceaser($easeInOutBack));
+
+        &:hover{
+            border-width: 0 86px 86px 86px;
+            span:before, span:after{ background-color: $color2; }
+        }
+
+        span{
+            position: relative;
+
+            &:before, &:after{
+                position: absolute;
+                content: " ";
+                display: block;
+                width: 12px;
+                height: 5px;
+                background-color: #000;
+                top: 30px;
+            }
+
+            &:before{
+                @include rotate(45deg);
+                right: -9px;
+            }
+
+            &:after{
+                @include rotate(-45deg);
+                left: -9px;
+            }
+        }
+    }
+}

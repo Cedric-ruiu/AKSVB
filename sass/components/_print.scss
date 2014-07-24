@@ -1,3 +1,5 @@
+@import 'compass';
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -44,4 +46,51 @@
 
     h2, h3 {
         page-break-after: avoid; }
+
+    .hidden, .no-print {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    .layout-single{
+        border: none;
+    }
+
+    .advert,
+    .menu-header,
+    .submenu-header,
+    .right-panel-social,
+    .comments-form,
+    .menu-footer,
+    .edit-link,
+    .reply-link,
+    .admin-links,
+    .overmenu-footer,
+    .comment-control
+    {
+        @extend .no-print;
+    }
+
+    h1,
+    h2,
+    h3{
+        color: $color1;
+    }
+
+    .logo, img.logo{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: $color1;
+    }
+
+    .comments-users.close .comment-list{
+        max-height: auto;
+    }
+
+    .only-print{
+        display: block !important;
+        visibility: visible;
+    }
 }
