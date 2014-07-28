@@ -18,13 +18,11 @@ $general-layout:smart;
    TRANSITIONS THEME
    ========================================================================== */
 
-%transition-bg{
-    @include transition(background-color 0.1s linear);
-}
+%transition-bg{ @include transition(background-color 0.1s linear); }
 
 
 /* ==========================================================================
-   PAGES OBJECTS
+   SLIDESHOW CONTENT
    ========================================================================== */
 
 .slideshow{
@@ -74,17 +72,14 @@ $general-layout:smart;
         @include respond-to(mobile) {
             margin: 50px 0 0 0;
             font-size: 40px;
-            //line-height: 1em;
         }
         @include respond-to(tablet) {
             margin: 120px 0 0 0;
             font-size: 60px; 
-            //line-height: 1.05em;
         }
         @include respond-to(desktop) { 
             margin: 160px 0 0 0;
             font-size: 80px;
-            //line-height: 1.1em;
         }
         @include respond-to(mobile-desktop) { 
             padding: 0 60px;
@@ -127,6 +122,11 @@ $general-layout:smart;
         @include opacity(0.6);
     }
 }
+
+
+/* ==========================================================================
+   SLIDESHOW PLUGIN
+   ========================================================================== */
 
 .bx-wrapper{
     position: relative;
@@ -223,6 +223,7 @@ $general-layout:smart;
     }
 }
 
+// need loading?
 /*.bx-wrapper .bx-loading {
     min-height: 50px;
     background: url(images/bx_loader.gif) center center no-repeat #fff;
@@ -233,3 +234,44 @@ $general-layout:smart;
     left: 0;
     z-index: 2000;
 }*/
+
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.main{
+    position: relative;
+
+    img.img, .img{
+        position: relative;
+        max-width: 100%;
+        border: 0;
+        @include border-radius(5px);
+    }
+
+    h1{
+        margin: 40px 0 0 0;
+        &:first-child{ margin-top: 0; }
+    }
+
+    p{ 
+        line-height: 1.6em;
+        text-align: justify;
+    }
+}
+
+
+.main hr, .hr{
+    position: relative;
+    max-width: 100%;
+    border: 0;
+    @include image('ideogrammes.png');
+    @include background-size(contain);
+    background-position: center;
+    @extend .clearfix;
+
+    @include respond-to(minimobile) { margin: 65px auto; }
+    @include respond-to(mobile) { margin: 80px auto; }
+    @include respond-to(tablet-desktop) { margin: 100px auto; }
+}

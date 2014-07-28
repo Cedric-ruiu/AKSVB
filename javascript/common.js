@@ -73,7 +73,7 @@ $(document).ready(function()
     });
 
     // Evite qu'un formulaire soit soumis plusieurs fois et ajoute une classe 'on' sur le boutton submit
-    $( ":submit" ).on('click', function()
+    $('form').submit(function()
     {
         if(action===false)
         {
@@ -104,7 +104,7 @@ $(document).ready(function()
         lng: 7.7551067,
         title: 'Salle de AKSVB à l\'école du Neufeld',
         infoWindow: {
-            content: '<div class="info" style="width:200px;"><img src="images/aksvb-logo-min-r.png" alt=""><p class="font-bold">Ecole du Neufeld</p><p>1, rue de Sundgau<br>67000 Strasbourg</p><a target="_blank" href="https://www.google.fr/maps/place/Ecole+du+Neufeld/@48.5658764,7.7566517,16z/data=!4m2!3m1!1s0x0:0xabba55e97668c48">Voir le plan complet</a></div>',
+            content: '<div class="info" style="width:200px;"><div class="aksvb-logo-min-r"></div><p class="font-bold">Ecole du Neufeld</p><p>1, rue de Sundgau<br>67000 Strasbourg</p><a target="_blank" href="https://www.google.fr/maps/place/Ecole+du+Neufeld/@48.5658764,7.7566517,16z/data=!4m2!3m1!1s0x0:0xabba55e97668c48">Voir le plan complet</a></div>',
             maxWidth: 250
         }
     });

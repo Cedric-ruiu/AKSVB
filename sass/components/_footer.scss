@@ -31,7 +31,14 @@
 
     .headline{
         .logo-aksvb-b{ margin: 40px -90px 0 0; }
-        .title{ margin-top: 51px; }
+        .title{ 
+            @include respond-to(minimobile) { margin-top: 46px; }
+            @include respond-to(mobile) { margin-top: 56px; }
+            @include respond-to(tablet) { margin-top: 51px; }
+            @include respond-to(desktop) { margin-top: 51px; }
+            
+        }
+
     }
 
     .form{ margin-top: 40px; }
@@ -41,19 +48,21 @@
     position: relative;
     height: 300px;
     width: 100%;
-    @include box-shadow(rgba(0,0,0,0.8) 0 0 5px 2px);
     
     .info {
-        img{ float:left;margin:0 10px 15px 0; }
+        .aksvb-logo-min-r{
+            float:left;
+            margin:0 10px 20px 0;
+        }
         p{ margin:0; }
     }
 }
 
 .informations{
     position: relative;
-    /*height: 233px;*/
     width: 100%;
     @extend .clearfix;
+    @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
 
     @include respond-to(mobiles) {
         text-align: center;

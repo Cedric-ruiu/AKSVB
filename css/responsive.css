@@ -1,6 +1,6 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/general\/\*\.png}line{font-family:\0000398}}
-.general-sprite, .logo-aksvb-y, .logo-aksvb-b, a.facebook-logo:after, .credits .opla-logo {
-  background: url('../images/general-s71a474824a.png') no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/general\/\*\.png}line{font-family:\0000390}}
+.general-sprite, .logo-aksvb-y, .logo-aksvb-b, .aksvb-logo-min-r, a.facebook-logo:after, .credits .opla-logo {
+  background: url('../images/general-sa70274a6f9.png') no-repeat; }
 
 /* http://easings.net */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -460,7 +460,7 @@ th {
   height: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/unsemantic\/_unsemantic-vars\.scss}line{font-family:\00003146}}
-.grid-container:before, .grid-5:before, .mobile-grid-5:before, .tablet-grid-5:before, .grid-10:before, .mobile-grid-10:before, .tablet-grid-10:before, .grid-15:before, .mobile-grid-15:before, .tablet-grid-15:before, .grid-20:before, .mobile-grid-20:before, .tablet-grid-20:before, .grid-25:before, .mobile-grid-25:before, .tablet-grid-25:before, .grid-30:before, .mobile-grid-30:before, .tablet-grid-30:before, .grid-35:before, .mobile-grid-35:before, .tablet-grid-35:before, .grid-40:before, .mobile-grid-40:before, .tablet-grid-40:before, .grid-45:before, .mobile-grid-45:before, .tablet-grid-45:before, .grid-50:before, .mobile-grid-50:before, .tablet-grid-50:before, .grid-55:before, .mobile-grid-55:before, .tablet-grid-55:before, .grid-60:before, .mobile-grid-60:before, .tablet-grid-60:before, .grid-65:before, .mobile-grid-65:before, .tablet-grid-65:before, .grid-70:before, .mobile-grid-70:before, .tablet-grid-70:before, .grid-75:before, .mobile-grid-75:before, .tablet-grid-75:before, .grid-80:before, .mobile-grid-80:before, .tablet-grid-80:before, .grid-85:before, .mobile-grid-85:before, .tablet-grid-85:before, .grid-90:before, .mobile-grid-90:before, .tablet-grid-90:before, .grid-95:before, .mobile-grid-95:before, .tablet-grid-95:before, .grid-100:before, .mobile-grid-100:before, .tablet-grid-100:before, .grid-33:before, .mobile-grid-33:before, .tablet-grid-33:before, .grid-66:before, .mobile-grid-66:before, .tablet-grid-66:before, .clearfix:before, .informations:before, .credits:before,
+.grid-container:before, .grid-5:before, .mobile-grid-5:before, .tablet-grid-5:before, .grid-10:before, .mobile-grid-10:before, .tablet-grid-10:before, .grid-15:before, .mobile-grid-15:before, .tablet-grid-15:before, .grid-20:before, .mobile-grid-20:before, .tablet-grid-20:before, .grid-25:before, .mobile-grid-25:before, .tablet-grid-25:before, .grid-30:before, .mobile-grid-30:before, .tablet-grid-30:before, .grid-35:before, .mobile-grid-35:before, .tablet-grid-35:before, .grid-40:before, .mobile-grid-40:before, .tablet-grid-40:before, .grid-45:before, .mobile-grid-45:before, .tablet-grid-45:before, .grid-50:before, .mobile-grid-50:before, .tablet-grid-50:before, .grid-55:before, .mobile-grid-55:before, .tablet-grid-55:before, .grid-60:before, .mobile-grid-60:before, .tablet-grid-60:before, .grid-65:before, .mobile-grid-65:before, .tablet-grid-65:before, .grid-70:before, .mobile-grid-70:before, .tablet-grid-70:before, .grid-75:before, .mobile-grid-75:before, .tablet-grid-75:before, .grid-80:before, .mobile-grid-80:before, .tablet-grid-80:before, .grid-85:before, .mobile-grid-85:before, .tablet-grid-85:before, .grid-90:before, .mobile-grid-90:before, .tablet-grid-90:before, .grid-95:before, .mobile-grid-95:before, .tablet-grid-95:before, .grid-100:before, .mobile-grid-100:before, .tablet-grid-100:before, .grid-33:before, .mobile-grid-33:before, .tablet-grid-33:before, .grid-66:before, .mobile-grid-66:before, .tablet-grid-66:before, .clearfix:before, .informations:before, .credits:before, .main hr:before, .hr:before,
 .grid-container:after,
 .grid-5:after,
 .mobile-grid-5:after,
@@ -530,7 +530,9 @@ th {
 .tablet-grid-66:after,
 .clearfix:after,
 .informations:after,
-.credits:after {
+.credits:after,
+.main hr:after,
+.hr:after {
   content: ".";
   display: block;
   overflow: hidden;
@@ -541,7 +543,7 @@ th {
   height: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/unsemantic\/_unsemantic-vars\.scss}line{font-family:\00003157}}
-.grid-container:after, .grid-5:after, .mobile-grid-5:after, .tablet-grid-5:after, .grid-10:after, .mobile-grid-10:after, .tablet-grid-10:after, .grid-15:after, .mobile-grid-15:after, .tablet-grid-15:after, .grid-20:after, .mobile-grid-20:after, .tablet-grid-20:after, .grid-25:after, .mobile-grid-25:after, .tablet-grid-25:after, .grid-30:after, .mobile-grid-30:after, .tablet-grid-30:after, .grid-35:after, .mobile-grid-35:after, .tablet-grid-35:after, .grid-40:after, .mobile-grid-40:after, .tablet-grid-40:after, .grid-45:after, .mobile-grid-45:after, .tablet-grid-45:after, .grid-50:after, .mobile-grid-50:after, .tablet-grid-50:after, .grid-55:after, .mobile-grid-55:after, .tablet-grid-55:after, .grid-60:after, .mobile-grid-60:after, .tablet-grid-60:after, .grid-65:after, .mobile-grid-65:after, .tablet-grid-65:after, .grid-70:after, .mobile-grid-70:after, .tablet-grid-70:after, .grid-75:after, .mobile-grid-75:after, .tablet-grid-75:after, .grid-80:after, .mobile-grid-80:after, .tablet-grid-80:after, .grid-85:after, .mobile-grid-85:after, .tablet-grid-85:after, .grid-90:after, .mobile-grid-90:after, .tablet-grid-90:after, .grid-95:after, .mobile-grid-95:after, .tablet-grid-95:after, .grid-100:after, .mobile-grid-100:after, .tablet-grid-100:after, .grid-33:after, .mobile-grid-33:after, .tablet-grid-33:after, .grid-66:after, .mobile-grid-66:after, .tablet-grid-66:after, .clearfix:after, .informations:after, .credits:after {
+.grid-container:after, .grid-5:after, .mobile-grid-5:after, .tablet-grid-5:after, .grid-10:after, .mobile-grid-10:after, .tablet-grid-10:after, .grid-15:after, .mobile-grid-15:after, .tablet-grid-15:after, .grid-20:after, .mobile-grid-20:after, .tablet-grid-20:after, .grid-25:after, .mobile-grid-25:after, .tablet-grid-25:after, .grid-30:after, .mobile-grid-30:after, .tablet-grid-30:after, .grid-35:after, .mobile-grid-35:after, .tablet-grid-35:after, .grid-40:after, .mobile-grid-40:after, .tablet-grid-40:after, .grid-45:after, .mobile-grid-45:after, .tablet-grid-45:after, .grid-50:after, .mobile-grid-50:after, .tablet-grid-50:after, .grid-55:after, .mobile-grid-55:after, .tablet-grid-55:after, .grid-60:after, .mobile-grid-60:after, .tablet-grid-60:after, .grid-65:after, .mobile-grid-65:after, .tablet-grid-65:after, .grid-70:after, .mobile-grid-70:after, .tablet-grid-70:after, .grid-75:after, .mobile-grid-75:after, .tablet-grid-75:after, .grid-80:after, .mobile-grid-80:after, .tablet-grid-80:after, .grid-85:after, .mobile-grid-85:after, .tablet-grid-85:after, .grid-90:after, .mobile-grid-90:after, .tablet-grid-90:after, .grid-95:after, .mobile-grid-95:after, .tablet-grid-95:after, .grid-100:after, .mobile-grid-100:after, .tablet-grid-100:after, .grid-33:after, .mobile-grid-33:after, .tablet-grid-33:after, .grid-66:after, .mobile-grid-66:after, .tablet-grid-66:after, .clearfix:after, .informations:after, .credits:after, .main hr:after, .hr:after {
   clear: both; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/unsemantic\/_unsemantic-vars\.scss}line{font-family:\00003173}}
@@ -2215,14 +2217,15 @@ input, textarea {
    ========================================================================== */
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000319}}
 html, body {
-  height: 100%; }
+  height: 100%;
+  min-width: 320px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000324}}
 body {
   color: #333333;
   font-size: 16px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000330}}
 .layout {
   position: relative;
   min-height: 100%;
@@ -2231,24 +2234,24 @@ body {
   overflow: hidden;
   background-color: #ecf0f1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000340}}
 a {
   color: #b40602; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000342}}
   a:hover {
     text-decoration: underline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000345}}
 h1 {
   font-size: 50px;
   color: #b40602; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000351}}
 h2 {
   font-size: 30px;
   color: #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000357}}
 input, textarea {
   position: relative;
   width: 100%;
@@ -2262,25 +2265,25 @@ input, textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000365}}
 input[type="text"], input[type="email"] {
   height: 40px;
   padding: 0 20px;
   background-color: #ecf0f1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000371}}
 input[type="submit"] {
   height: 40px;
   background-color: #000;
   color: #b40602; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000377}}
   input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.8); }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000381}}
   input[type="submit"]:active {
     background-color: #ecf0f1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000387}}
 textarea {
   height: 150px;
   padding: 20px 15px;
@@ -2289,109 +2292,116 @@ textarea {
 /* ==========================================================================
    GENERAL COMPONENTS
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\0000398}}
 .logo-aksvb-y {
   position: relative;
-  background-position: -184px 0;
+  background-position: 0 -224px;
   width: 84px;
   height: 80px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003103}}
 .logo-aksvb-b {
   position: relative;
-  background-position: -100px 0;
+  background-position: 0 -144px;
   width: 84px;
   height: 80px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003108}}
+.aksvb-logo-min-r {
+  position: relative;
+  background-position: 0 -60px;
+  width: 44px;
+  height: 42px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003113}}
 a.headline, .headline {
   position: relative;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase; }
   @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003119}}
     a.headline .title, .headline .title {
       margin-left: 54px;
       margin-top: 14px;
       font-size: 13.79px; } }
   @media only screen and (min-width: 670px) and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003119}}
     a.headline .title, .headline .title {
       margin-left: 90px;
       margin-top: 25px;
       font-size: 22px; } }
   @media only screen and (min-width: 897px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003119}}
     a.headline .title, .headline .title {
       margin-left: 90px;
       margin-top: 21px;
       font-size: 27.03px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003139}}
   a.headline .subtitle, .headline .subtitle {
     text-align: left; }
     @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003139}}
       a.headline .subtitle, .headline .subtitle {
         margin: -3px 0 0 54px;
         font-size: 8.78px; } }
     @media only screen and (min-width: 670px) and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003139}}
       a.headline .subtitle, .headline .subtitle {
         margin: -7px 0 0 90px;
         font-size: 14px; } }
     @media only screen and (min-width: 897px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003139}}
       a.headline .subtitle, .headline .subtitle {
         margin: -7px 0 0 90px;
         font-size: 18.02; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003157}}
   a.headline .logo-aksvb-y, a.headline .logo-aksvb-b, .headline .logo-aksvb-y, .headline .logo-aksvb-b {
     float: left;
     display: inline-block; }
     @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003157}}
       a.headline .logo-aksvb-y, a.headline .logo-aksvb-b, .headline .logo-aksvb-y, .headline .logo-aksvb-b {
         margin: 10px -54px 0 0; } }
     @media only screen and (min-width: 670px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003157}}
       a.headline .logo-aksvb-y, a.headline .logo-aksvb-b, .headline .logo-aksvb-y, .headline .logo-aksvb-b {
         margin: 10px -90px 0 0; } }
   @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003172}}
     a.headline .logo-aksvb-y, .headline .logo-aksvb-y {
-      background-position: -109px -140px;
+      background-position: 0 -102px;
       width: 44px;
       height: 42px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003176}}
     a.headline .logo-aksvb-b, .headline .logo-aksvb-b {
-      background-position: -65px -140px;
+      background-position: 0 -18px;
       width: 44px;
       height: 42px; } }
 
 /* ==========================================================================
    ALERT DEFAULT (from twitter bootstrap)
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003183}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003189}}
 .alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003196}}
 .alert-error {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #ebccd1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003202}}
 .alert-success {
   color: #468847;
   background-color: #dff0d8;
   border-color: #d6e9c6; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003208}}
 .close:hover, .close:focus {
   color: #000;
   text-decoration: none;
@@ -2400,21 +2410,21 @@ a.headline, .headline {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003215}}
 .alert-dismissable .close {
   position: relative;
   top: -2px;
   right: -21px;
   color: inherit; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003221}}
 button.close {
   padding: 0;
   cursor: pointer;
   background: transparent;
   border: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_layout\.scss}line{font-family:\00003227}}
 .close {
   float: right;
   font-size: 21px;
@@ -2511,7 +2521,7 @@ a.facebook-logo {
   a.facebook-logo:after {
     position: absolute;
     content: " ";
-    background-position: -55px -140px;
+    background-position: -44px -18px;
     width: 10px;
     height: 21px;
     top: 40px;
@@ -2893,82 +2903,94 @@ a.letter-master {
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000333}}
   .contact .headline .logo-aksvb-b {
     margin: 40px -90px 0 0; }
+  @media only screen and (max-width: 669px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000334}}
-  .contact .headline .title {
-    margin-top: 51px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000337}}
+    .contact .headline .title {
+      margin-top: 46px; } }
+  @media only screen and (min-width: 670px) and (max-width: 896px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000334}}
+    .contact .headline .title {
+      margin-top: 56px; } }
+  @media only screen and (min-width: 897px) and (max-width: 1199px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000334}}
+    .contact .headline .title {
+      margin-top: 51px; } }
+  @media only screen and (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000334}}
+    .contact .headline .title {
+      margin-top: 51px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000344}}
   .contact .form {
     margin-top: 40px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000347}}
 .maps {
   position: relative;
   height: 300px;
-  width: 100%;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 5px 2px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 5px 2px;
-  box-shadow: rgba(0, 0, 0, 0.8) 0 0 5px 2px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000347}}
-  .maps .info img {
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000353}}
+  .maps .info .aksvb-logo-min-r {
     float: left;
-    margin: 0 10px 15px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000348}}
+    margin: 0 10px 20px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000357}}
   .maps .info p {
     margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000361}}
 .informations {
   position: relative;
-  /*height: 233px;*/
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 -6px 5px -3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 -6px 5px -3px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 -6px 5px -3px; }
   @media only screen and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000361}}
     .informations {
       text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000369}}
       .informations p {
         margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000372}}
         .informations p:last-child {
           margin: 3px 0 40px 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000377}}
   .informations p {
     margin: 0; }
     @media only screen and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000381}}
       .informations p:last-child {
         margin: 3px 0 40px 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000385}}
   .informations img {
     position: relative; }
     @media only screen and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000385}}
       .informations img {
         display: block;
         margin: -20px auto 8px; } }
     @media only screen and (min-width: 897px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000385}}
       .informations img {
         float: left;
         margin: -20px 10px 8px 0; } }
   @media only screen and (min-width: 897px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000399}}
     .informations .line {
       margin-bottom: 40px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003102}}
   .informations .line:first-child {
     margin-top: 50px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003105}}
   .informations .ffwushu {
     text-transform: uppercase;
     font-size: 12.09px; }
     @media only screen and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003105}}
       .informations .ffwushu {
         display: inline-block;
         max-width: 300px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003116}}
 .credits {
   position: relative;
   height: 112px;
@@ -2977,18 +2999,18 @@ a.letter-master {
   color: #fff;
   font-size: 12px;
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003126}}
   .credits p {
     margin: 35px 0 0 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003128}}
   .credits .opla-logo {
     position: relative;
     display: inline-block;
     top: 4px;
-    background-position: 0 -140px;
+    background-position: 0 0;
     width: 55px;
     height: 18px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003135}}
   .credits .top {
     position: absolute;
     display: inline-block;
@@ -3009,16 +3031,16 @@ a.letter-master {
     -moz-transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
     -o-transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
     transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550); }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003146}}
     .credits .top:hover {
       border-width: 0 86px 86px 86px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003148}}
       .credits .top:hover span:before, .credits .top:hover span:after {
         background-color: #b40602; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003151}}
     .credits .top span {
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003154}}
       .credits .top span:before, .credits .top span:after {
         position: absolute;
         content: " ";
@@ -3027,7 +3049,7 @@ a.letter-master {
         height: 5px;
         background-color: #000;
         top: 30px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003164}}
       .credits .top span:before {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
@@ -3035,7 +3057,7 @@ a.letter-master {
         -o-transform: rotate(45deg);
         transform: rotate(45deg);
         right: -9px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003160}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/components\/_footer\.scss}line{font-family:\00003169}}
       .credits .top span:after {
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
@@ -3055,9 +3077,9 @@ input[type="submit"], a.facebook-logo, a.letter-master, .lang-menu, .control-men
   transition: background-color 0.1s linear; }
 
 /* ==========================================================================
-   PAGES OBJECTS
+   SLIDESHOW CONTENT
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000328}}
 .slideshow {
   position: relative;
   overflow: auto;
@@ -3065,22 +3087,22 @@ input[type="submit"], a.facebook-logo, a.letter-master, .lang-menu, .control-men
   color: #ecf0f1;
   background-color: #000; }
   @media only screen and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000328}}
     .slideshow {
       height: 300px; } }
   @media only screen and (min-width: 897px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000328}}
     .slideshow {
       height: 500px; } }
   @media only screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000328}}
     .slideshow {
       height: 620px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000338}}
   .slideshow .slide {
     position: relative;
     height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000343}}
   .slideshow .slide-img {
     position: absolute;
     display: block;
@@ -3094,102 +3116,105 @@ input[type="submit"], a.facebook-logo, a.letter-master, .lang-menu, .control-men
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000354}}
     .lt-ie9 .slideshow .slide-img {
       background-size: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000357}}
   .slideshow .slide-content {
     position: relative;
     text-align: center;
     color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
   .slideshow h1 {
     color: #fff; }
     @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
       .slideshow h1 {
         margin: 50px 0 15px 0;
         padding: 0;
         font-size: 30px;
         line-height: 1em; } }
     @media only screen and (min-width: 670px) and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
       .slideshow h1 {
         margin: 50px 0 0 0;
         font-size: 40px; } }
     @media only screen and (min-width: 897px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
       .slideshow h1 {
         margin: 120px 0 0 0;
         font-size: 60px; } }
     @media only screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
       .slideshow h1 {
         margin: 160px 0 0 0;
         font-size: 80px; } }
     @media only screen and (min-width: 670px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000363}}
       .slideshow h1 {
         padding: 0 60px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
   .slideshow h2 {
     color: #ffffff;
     margin: 5px 0; }
     @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
       .slideshow h2 {
         padding: 0;
         margin: 0;
         font-size: 15px; } }
     @media only screen and (min-width: 670px) and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
       .slideshow h2 {
         font-size: 20px; } }
     @media only screen and (min-width: 897px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
       .slideshow h2 {
         font-size: 20px; } }
     @media only screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
       .slideshow h2 {
         font-size: 30px; } }
     @media only screen and (min-width: 670px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\0000389}}
       .slideshow h2 {
         padding: 0 60px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
   .slideshow p {
     margin: 0;
     color: #fff; }
     @media only screen and (max-width: 669px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
       .slideshow p {
         padding: 0;
         font-size: 15px; } }
     @media only screen and (min-width: 670px) and (max-width: 896px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
       .slideshow p {
         font-size: 20px; } }
     @media only screen and (min-width: 897px) and (max-width: 1199px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
       .slideshow p {
         font-size: 20px; } }
     @media only screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
       .slideshow p {
         font-size: 30px; } }
     @media only screen and (min-width: 670px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003104}}
       .slideshow p {
         padding: 0 60px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003118}}
   .slideshow h1.shadow, .slideshow h2.shadow, .slideshow p.shadow, .slideshow .shadow h1, .slideshow .shadow h2, .slideshow .shadow p {
     text-shadow: black 1px 1px 4px, black 2px 2px 4px, black 3px 3px 4px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003121}}
   .slideshow .shadow .slide-img {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6; }
 
+/* ==========================================================================
+   SLIDESHOW PLUGIN
+   ========================================================================== */
 @media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003131}}
 .bx-wrapper {
   position: relative; }
@@ -3360,3 +3385,55 @@ input[type="submit"], a.facebook-logo, a.letter-master, .lang-menu, .control-men
     left: 0;
     z-index: 2000;
 }*/
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003243}}
+.main {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003246}}
+  .main img.img, .main .img {
+    position: relative;
+    max-width: 100%;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003253}}
+  .main h1 {
+    margin: 40px 0 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003255}}
+    .main h1:first-child {
+      margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003258}}
+  .main p {
+    line-height: 1.6em;
+    text-align: justify; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003265}}
+.main hr, .hr {
+  position: relative;
+  max-width: 100%;
+  border: 0;
+  background: url('../images/ideogrammes.png?1406478602') no-repeat 0 0 transparent;
+  width: 612px;
+  height: 60px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: center; }
+  @media only screen and (max-width: 669px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003265}}
+    .main hr, .hr {
+      margin: 65px auto; } }
+  @media only screen and (min-width: 670px) and (max-width: 896px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003265}}
+    .main hr, .hr {
+      margin: 80px auto; } }
+  @media only screen and (min-width: 897px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/Q\:\/www\/AKSVB\/sass\/responsive\.scss}line{font-family:\00003265}}
+    .main hr, .hr {
+      margin: 100px auto; } }

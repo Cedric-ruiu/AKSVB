@@ -18,6 +18,7 @@ input, textarea{
 
 html, body{
     height: 100%;
+    min-width: 320px;
 }
 
 body{
@@ -102,6 +103,11 @@ textarea{
 .logo-aksvb-b{
     position: relative;
     @include mysprite(aksvb-logo-b);
+}
+
+.aksvb-logo-min-r{
+    position: relative;
+    @include mysprite(aksvb-logo-min-r);
 }
 
 a.headline, .headline{
