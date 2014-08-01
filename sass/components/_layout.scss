@@ -1,20 +1,8 @@
 /* ==========================================================================
-   FORM (reset)
-   ========================================================================== */
-
-input, textarea{
-    outline: none;
-    margin: 0 0 20px 0;
-    padding: 0;
-    -webkit-appearance: none;
-    -webkit-focus-ring-color: none;
-    @include border-radius(0);
-    &:focus{ outline: none; }
-}
-
-/* ==========================================================================
    LAYOUT
    ========================================================================== */
+
+*{ @include box-sizing(border-box); }
 
 html, body{
     height: 100%;
@@ -32,38 +20,60 @@ body{
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    //margin-bottom: - $footer-height;
     overflow: hidden;
     background-color: $colorw;
 }
+
+
+/* ==========================================================================
+   INLINE COMPONENTS
+   ========================================================================== */
 
 a{
     color: $color2;
     &:hover{ text-decoration: underline; }
 }
 
+h1, h2, h3, h4, h5, h6{
+    text-rendering: optimizeLegibility;
+    color: $color2;
+}
+
 h1{
     @extend .font-large;
     font-size: 50px;
-    color: $color2;
+    line-height: 1em;
 }
 
 h2{
     @extend .font-bold;
     font-size: 30px;
-    color: #000;
 }
 
+
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+
 input, textarea{
+    /* reset */
+    outline: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -webkit-focus-ring-color: none;
+    @include border-radius(0);
+    &:focus{ outline: none; }
+
     position: relative;
     width: 100%;
     border: 0;
     @include border-radius(3px);
-    @include box-sizing(border-box);
 }
 
 input[type="text"], input[type="email"]{
     height: 40px;
+    line-height: 40px;
     padding: 0 20px;
     background-color: $colorw;
 }
@@ -74,14 +84,8 @@ input[type="submit"]{
     color: $color2;
     @extend %transition-bg;
 
-    &:hover{
-        background-color: rgba(#000, 0.8);
-    }
-
-    &:active{
-        background-color: $colorw;
-    }
-
+    &:hover{ background-color: rgba(#000, 0.8); }
+    &:active{ background-color: $colorw; }
 }
 
 textarea{
@@ -92,8 +96,50 @@ textarea{
 
 
 /* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+    thead{
+        background-color: $color1;
+        @extend .font-bold;
+
+        th{ 
+            font-weight: normal; 
+            border-top: 0;
+        }
+    }
+
+    tbody{
+        background-color: #e6d789;
+    }
+    
+    th, td{
+        padding: 25px 13px;
+        vertical-align: middle;
+        border-top: 1px solid darken($color1, 10%);
+        border-left: 1px solid darken($color1, 10%);
+
+        @include respond-to(minimobile) { padding: 10px 5px; }
+
+        &:first-child{ border-left: 0; }
+    }
+}
+
+
+/* ==========================================================================
    GENERAL COMPONENTS
    ========================================================================== */
+
+// logos
 
 .logo-aksvb-y{
     position: relative;
@@ -109,6 +155,9 @@ textarea{
     position: relative;
     @include mysprite(aksvb-logo-min-r);
 }
+
+
+// headline (logo + title + subtitle)
 
 a.headline, .headline{
     position: relative;
@@ -158,79 +207,34 @@ a.headline, .headline{
         float: left;
         display: inline-block;
 
-        @include respond-to(minimobile) {
-            margin: 10px -54px 0 0;
-        }
-        @include respond-to(mobile-desktop) {
-            margin: 10px -90px 0 0;
-        }
+        @include respond-to(minimobile) { margin: 10px -54px 0 0; }
+        @include respond-to(mobile-desktop) { margin: 10px -90px 0 0; }
     }
-
-
 
     @include respond-to(minimobile) {
-        .logo-aksvb-y{
-            @include mysprite(aksvb-logo-min-y);
-        }
-
-        .logo-aksvb-b{
-            @include mysprite(aksvb-logo-min-b);
-        }
+        .logo-aksvb-y{ @include mysprite(aksvb-logo-min-y); }
+        .logo-aksvb-b{ @include mysprite(aksvb-logo-min-b); }
     }
-
-
 }
 
 
-/* ==========================================================================
-   ALERT DEFAULT (from twitter bootstrap)
-   ========================================================================== */
+// Alert box
 
-.alert{
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.alert-error{
-    color: #b94a48;
-    background-color: #f2dede;
-    border-color: #ebccd1;
+%alert{
+    position: relative;
+    width: 100%;
+    padding: 14px 20px;
+    margin: 0 0 20px 0;
+    color: #fff;
+    @include border-radius(3px);
 }
 
 .alert-success{
-    color: #468847;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
+    @extend %alert;
+    background-color: $color-success;
 }
 
-.close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    filter: alpha(opacity=50);
-    @include opacity(0.5)
-}
-.alert-dismissable .close {
-    position: relative;
-    top: -2px;
-    right: -21px;
-    color: inherit;
-}
-button.close {
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-}
-.close {
-    float: right;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    @include opacity(0.2);
-    filter: alpha(opacity=20);
+.alert-error{
+    @extend %alert;
+    background-color: $color-error;
 }

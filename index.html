@@ -1,15 +1,33 @@
- <!DOCTYPE html>
- <!--[if lte IE 8]>     <html class="no-js ie8" lang=""> <![endif]-->
- <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+ <!doctype html>
+<!--[if lte IE 8]>     <html class="no-js ie8 lte-ie9 lte-ie8" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9 lte-ie9" lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>AKSVB Strasbourg</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         
         <link href='http://fonts.googleapis.com/css?family=Oswald:300,700|Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href="css/responsive.css" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="mstile-144x144.png">
+
         <script src="javascript/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
@@ -24,11 +42,7 @@
             
             <div class="header">
                 <div class="header-top">
-                    <a class="headline" alt="AKSVB Strasbourg" href="http://aksvb-strasbourg.fr">
-                        <div class="logo-aksvb-y"></div>
-                        <p class="title">École Kung Fu Shaolin Vu Ba</p>
-                        <p class="subtitle">Arts martiaux traditionnels sino-vietnamien</p>
-                    </a>
+                    
 
                     <div class="header-options">
 
@@ -51,6 +65,12 @@
                         </div>
 
                     </div>
+
+                    <a class="headline" alt="AKSVB Strasbourg" href="http://aksvb-strasbourg.fr">
+                        <div class="logo-aksvb-y"></div>
+                        <p class="title">École Kung Fu Shaolin Vu Ba</p>
+                        <p class="subtitle">Arts martiaux traditionnels sino-vietnamien</p>
+                    </a>
 
                 </div>
 
@@ -94,6 +114,7 @@
             ========================================================================== -->
 
             <div id="slideshow" class="slideshow">
+
                 <div class="slide">
                     <span data-picture>
                         <span data-src="pictures/slideshow/micro-picture-1.jpg"></span>
@@ -109,13 +130,11 @@
                             <div class="slide-img" style="background-image: url(pictures/slideshow/large-picture-1.jpg)"></div>
                         </noscript>
                     </span>
-
-                    <div class="grid-container slide-content">
-                        <div class="grid-100">
-                            <h1 class="shadow">Rentrée Saison 2013-2014</h1>
-                            <p class="shadow">Accueil des débutants a partir du mercredi 11 septembre 2013.</p>
-                            <p class="uppercase">Inscriptions ouvertes tout au long de la saison.</p>
-                        </div>
+                    
+                    <div class="slide-content">
+                        <h1 class="shadow">Rentrée Saison 2013-2014</h1>
+                        <p class="shadow">Accueil des débutants a partir du mercredi 11 septembre 2013.</p>
+                        <p class="uppercase">Inscriptions ouvertes tout au long de la saison.</p>
                     </div>
                     
                 </div>
@@ -136,11 +155,10 @@
                         </noscript>
                     </span>
 
-                    <div class="grid-container slide-content shadow">
-                        <div class="grid-100">
-                            <h1>News 2 exemple</h1>
-                            <p>Texte exemple 1</p>
-                        </div>
+                    <div class="slide-content shadow">
+                        <h1>News 2 exemple</h1>
+                        <p>Texte exemple 1</p>
+                        <a class="button" href="#">Voir le site</a>
                     </div>
                     
                 </div>
@@ -161,12 +179,10 @@
                         </noscript>
                     </span>
 
-                    <div class="grid-container slide-content">
-                        <div class="grid-100">
-                            <h1>Exemple news 3</h1>
-                            <h2>Sous-titre test</h2>
-                            <p>text test</p>
-                        </div>
+                    <div class="slide-content">
+                        <h1>Exemple news 3</h1>
+                        <h2>Sous-titre test</h2>
+                        <p>text test</p>
                     </div>
                     
                 </div>
@@ -177,47 +193,109 @@
                 CONTENT PAGE
             ========================================================================== -->
 
-            <div class="main">
+            <div class="main" id="main">
+
                 <div class="grid-container">
-                    
-                    <div class="grid-100"><hr></div>
-                    <div class="grid-50 ">
-                        <img class="img" src="pictures/picture-1.jpg" alt="">
-                    </div>
-                    <div class="grid-50 ">
+
+                    <div class="grid-100 hr-line"><hr></div>
+
+                    <div class="grid-50 tablet-grid-66">
                         <h1>Jim</h1>
-                        <p>It's because i'm green isn't it! here she comes to wreck the day. your entrance was good, his was better. brain freeze. excuse me, i'd like to ass you a few questions. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. we got no food we got no money and our pets heads are falling off! haaaaaaarry. look ma i'm road kill we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. hey, maybe i will give you a call sometime. your number still 911? alrighty then.</p>
+                        <h2>Subtitle</h2>
+                        <p>It's because i'm green isn't it! here she comes to wreck the day. your entrance was good, <strong>his was better</strong>. brain freeze. excuse me, i'd like to ass you a few questions. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. we got no food we got no money and our pets heads are falling off! <a href="#">haaaaaaarry</a>. look ma i'm road kill we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. hey, maybe i will give you a call sometime. your number still 911? alrighty then.</p>
+                        <h2>Subtitle</h2>
+                        <p>It's because i'm green isn't it! here she comes to wreck the day. your entrance was good, <strong>his was better</strong>. brain freeze. excuse me, i'd like to ass you a few questions. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. we got no food we got no money and our pets heads are falling off! <a href="#">haaaaaaarry</a>.</p>
+                        <p>Look ma i'm road kill we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. hey, maybe i will give you a call sometime. your number still 911? alrighty then.</p>
+                        <p>Look ma i'm road kill we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. hey, maybe i will give you a call sometime. your number still 911? alrighty then.</p>
+                    </div>
+                    <div class="grid-50 tablet-grid-33 grid-center-r">
+                        <img class="img" src="pictures/picture-4.jpg" alt="">
+                    </div>
+                
+                    <div class="grid-100 grid-parent">
+                        <div class="grid-33 tablet-grid-33 mobile-grid-50">
+                            <img class="img" src="pictures/picture-1.jpg" alt="">
+                        </div>
+                        <div class="grid-33 tablet-grid-33 mobile-grid-50">
+                            <img class="img" src="pictures/picture-2.jpg" alt="">
+                        </div>
+                        <div class="grid-33 tablet-grid-33">
+                            <img class="img" src="pictures/picture-3.jpg" alt="">
+                        </div>
                     </div>
 
-                    <div class="grid-100"><hr></div>
+                    <div class="grid-100 hr-line"><hr></div>
+
                     <div class="grid-100">
                         <img class="img" src="pictures/picture-2.jpg" alt="">
                     </div>
+                    
+                    <div class="grid-100 hr-line"><hr></div>
 
-                    <div class="grid-100"><hr></div>
                     <div class="grid-50 ">
                         <h1>Events</h1>
+                        <!--<div class="arrow-down"></div><div class="arrow-up"></div>-->
                         <div class="events">
                             <ul>
-                                <li>first event <span>25/02/2014</span></li>
-                                <li>Maître Rémi Huynh Hoareau - 9ème dan Shaolin Do <span>25/02/2014</span></li>
-                                <li>Fête du Qi Gong 2013 <span>25/02/2014</span></li>
-                                <li>Carnaval de Strasbourg 2013 <span>25/02/2014</span></li>
-                                <li>Célébrations du Nouvel An Asiatique 2013 <span>25/02/2014</span></li>
-                                <li>L'AKSVB Strasbourg fête ses 15 ans <span>25/02/2014</span></li>
-                                <li>event 6 <span>25/02/2014</span></li>
-                                <li>event 7 <span>25/02/2014</span></li>
-                                <li>last event <span>25/02/2014</span></li>
+                                <li><span>25/02/2014</span>first event</li>
+                                <li><span>25/02/2014</span>y. your entrance was good,It's becauseMaître <strong>Rémi Huynh Hoareau</strong> - 9ème dan Shaolin Do It's because i'm green isn't it! here she comes to wreck the d i'm green isn't it! here she comes to wreck the day. your entrance was good,</li>
+                                <li><span>25/02/2014</span>Fête du Qi Gong 2013</li>
+                                <li><span>25/02/2014</span>Carnaval de Strasbourg 2013</li>
+                                <li><span>25/02/2014</span>Célébrations du Nouvel An Asiatique 2013</li>
+                                <li><span>25/02/2014</span>L'AKSVB Strasbourg fête ses 15 ans</li>
+                                <li><span>25/02/2014</span>event 6</li>
+                                <li><span>25/02/2014</span>event 7</li>
+                                <li><span>25/02/2014</span>last event</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="grid-50 ">
+                    <div class="grid-50 grid-center-r">
                         <img class="img" src="pictures/picture-1.jpg" alt="">
                     </div>
-                    
-                    <div class="grid-100"><hr></div>
+                
+                    <div class="grid-100 hr-line"><hr></div>
+
+                    <div class="grid-50 push-50">
+                        <h1>Tarifs</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Paiement en 1 fois</th>
+                                    <th>Paiement en 3 fois</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold">Enfants</td>
+                                    <td>90€ <br>par chèque ou espèce</td>
+                                    <td>3x30€ <br>chèque uniquement</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold">Adultes</td>
+                                    <td>140€ <br>par chèque ou espèces</td>
+                                    <td>2x50€ + 1x40€ <br>chèque uniquement</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="grid-50 pull-50">
+                        <img class="img" src="pictures/picture-1.jpg" alt="">
+                    </div>
+                
+                    <div class="grid-100 hr-line"><hr></div>
+
+                    <div class="grid-50">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uXN03Oixq8Y" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="grid-50">
+                        <img class="img" src="pictures/picture-3.jpg" alt="">
+                    </div>
+                
+                    <div class="grid-100 hr-line"><hr></div>
 
                 </div>
+
             </div>
 
 
@@ -231,15 +309,20 @@
                 <!-- ==== CONTACT FORM ==== -->
 
                 <div class="contact" id="contact">
+
                     <div class="headline">
                         <div class="logo-aksvb-b"></div>
-                        <p class="title">École Kung Fu Shaolin Vu Ba</h1>
+                        <p class="title">École Kung Fu Shaolin Vu Ba</p>
                         <p class="subtitle">Arts martiaux traditionnels sino-vietnamien</p>
                     </div>
-                    <div class="grid-container form">
+                    <div class="grid-container">
+                        <div class="grid-50 prefix-25 suffix-25">
+                            <div class="alert-error"><p>Ex message après validation de formulaire : BUUUGGGGG!</p></div>
+                            <div class="alert-success"><p>Ex Message après validation de formulaire : Congratulation boy!</p></div>
+                        </div>
                         <form role="form" accept-charset="utf-8" method="post" action="">
                             <div class="grid-25 prefix-25 tablet-grid-50">
-                                <input type="text" name="name" placeholder="Nom &amp; Prénom" autofocus required>
+                                <input type="text" name="name" placeholder="Nom &amp; Prénom" required>
                             </div>
                             <div class="grid-25 suffix-25 tablet-grid-50">
                                 <input type="email" name="email" placeholder="Adresse email" required>
@@ -273,11 +356,11 @@
                                 <br>Responsable de l'Ecole de Strasbourg
                             </p>
                         </div>
-                        <div class="grid-25 prefix-5 suffix-20 tablet-grid-35 tablet-prefix-5 tablet-suffix-10">
+                        <div class="grid-30 prefix-5 suffix-15 tablet-grid-40 tablet-prefix-5 tablet-suffix-5">
                             <p class="font-bold">Franck BEAUBOIS - 06 84 16 18 13</p>
                             <p>
-                                Trésorier de l’association
-                                <br>Instructeur de l’Ecole de Strasbourg
+                                Trésorier de l'association
+                                <br>Instructeur de l'Ecole de Strasbourg
                             </p>
                         </div>
                     </div>
@@ -314,16 +397,13 @@
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="javascript/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script>Modernizr.mq('only all') || document.write('<script src="javascript/vendor/respond.min.js"><\/script>');</script>
         <script src="javascript/vendor/jquery.velocity.min.js"></script>
         <script src="javascript/vendor/jquery.fitvids.js"></script>
         <script src="javascript/vendor/picturefill.js"></script>
         <script src="javascript/vendor/jquery.bxslider.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="javascript/vendor/gmaps.js"></script>
-
-        <!--<script src="javascript/vendor//jScrollPane/js/jquery.mousewheel.js"></script>
-        <script src="javascript/vendor/jScrollPane/js/jquery.jscrollpane.min.js"></script>-->
-
         <script>Modernizr.input.placeholder || document.write('<script src="javascript/vendor/jquery.placeholder.js"><\/script>')</script>
 
         <script type="text/javascript" src="javascript/common.js"></script>

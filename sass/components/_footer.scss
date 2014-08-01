@@ -5,10 +5,8 @@
 .footer{
     position: relative;
     width: 100%;
-    //height: $footer-height;
     margin: 0;
     padding: 0;
-    @include box-sizing(border-box);
     z-index: 50;
 }
 
@@ -30,18 +28,16 @@
     }
 
     .headline{
-        .logo-aksvb-b{ margin: 40px -90px 0 0; }
-        .title{ 
-            @include respond-to(minimobile) { margin-top: 46px; }
-            @include respond-to(mobile) { margin-top: 56px; }
-            @include respond-to(tablet) { margin-top: 51px; }
-            @include respond-to(desktop) { margin-top: 51px; }
-            
+        margin: 40px 0;
+
+        .logo-aksvb-b{ margin: 0 -90px 0 0; }
+        .title{
+            @include respond-to(minimobile) { margin-top: 6px; }
+            @include respond-to(mobile) { margin-top: 16px; }
+            @include respond-to(tablet) { margin-top: 11px; }
+            @include respond-to(desktop) { margin-top: 11px; }
         }
-
     }
-
-    .form{ margin-top: 40px; }
 }
 
 .maps{
@@ -145,31 +141,50 @@
 
         &:hover{
             border-width: 0 86px 86px 86px;
-            span:before, span:after{ background-color: $color2; }
+            .csstransforms &{
+                span:before, span:after{ background-color: $color2; }
+            }
+            .no-csstransforms &{
+                span{ @include triangle(top, $color2, 12px); }
+            }
         }
 
         span{
-            position: relative;
+            display: block;
 
-            &:before, &:after{
-                position: absolute;
-                content: " ";
-                display: block;
-                width: 12px;
-                height: 5px;
-                background-color: #000;
-                top: 30px;
+            .no-csstransforms &{
+                left: 50%;
+                margin: 0 0 0 -12px;
+                position: relative;
+                top: 15px;
+                @include triangle(top, #000, 12px);
+            }            
+
+            .csstransforms &{
+                position: relative;
+
+                &:before, &:after{
+                    position: absolute;
+                    content: " ";
+                    display: block;
+                    width: 12px;
+                    height: 5px;
+                    background-color: #000;
+                    top: 15px;
+                }
+
+                &:before{
+                    @include rotate(45deg);
+                    right: -9px;
+                }
+
+                &:after{
+                    @include rotate(-45deg);
+                    left: -9px;
+                }
             }
 
-            &:before{
-                @include rotate(45deg);
-                right: -9px;
-            }
-
-            &:after{
-                @include rotate(-45deg);
-                left: -9px;
-            }
+            
         }
     }
 }

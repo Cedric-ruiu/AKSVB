@@ -4,7 +4,6 @@
 %draft{
     @include box-sizing(border-box);
     @include box-shadow(rgba(0,0,0,0.7) 0px -6px 5px);  @include box-shadow(inset black 5px 0px 7px -7px);
-    @extend %bloc-absolute-tl;
     @extend .clearfix;
     @extend .font-regular;
     @include border-radius(3px);
@@ -12,7 +11,8 @@
     @include background(image-url("logo-small.png") no-repeat 0 0 transparent);
     width: image-width("logo-small.png");
     @include mysprite(picto-search-min);
-    margin-top: - general-24-sprite-height(picto-search-min) / 2;
+    margin-top: - mysprite-sprite-height(picto-search-min) / 2;
+    transparentize(black, 0.5); darken(#fff, 50%); lighten(#fff, 50%);
 }*/
 
 
@@ -105,41 +105,12 @@
     visibility: hidden;
 }
 
-/* Alignement de texte */
 .aleft    { text-align: left; }
 .acenter  { text-align: center; }
 .aright   { text-align: right; }
 .ajustify { text-align: justify; }
-
-/* Capitales et petites capitales */
 .uppercase  { text-transform: uppercase; }
 .small-caps { text-transform: small-caps; }
-
-@mixin bloc-absolute(){
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-%bloc-absolute-tl{
-    @include bloc-absolute;
-    top: 0; left: 0;
-}
-
-%bloc-absolute-tr{
-    @include bloc-absolute;
-    top: 0; right: 0;
-}
-
-%bloc-absolute-bl{
-    @include bloc-absolute;
-    bottom: 0; left: 0;
-}
-
-%bloc-absolute-br{
-    @include bloc-absolute;
-    bottom: 0; right: 0;
-}
 
 /* include image path & dimension */
 @mixin image($name){
@@ -172,15 +143,21 @@
     }
 }
 
-@mixin selection($background, $color) {
-    ::-moz-selection { /* Gecko */
-        background: $background;
-        color: $color;
-    }
-
+@mixin selection($background, $color, $shadow: none) {
     ::selection {
         background: $background;
         color: $color;
+        text-shadow: $shadow;
+    }
+    ::-moz-selection { /* Gecko */
+        background: $background;
+        color: $color;
+        text-shadow: $shadow;
+    }
+    ::-webkit-selection{
+        background: $background;
+        color: $color;
+        text-shadow: $shadow;
     }
 }
 
@@ -252,8 +229,8 @@
 
 
 /* 
-* @include triangle within a pseudo element and add positioning properties (ie. top, left)
-* $direction: top, bottom, left, right, topleft, topright, bottomleft, bottomright
+*  @include triangle within a pseudo element and add positioning properties (ie. top, left)
+*  $direction: top, bottom, left, right, topleft, topright, bottomleft, bottomright
 */
 @mixin triangle($direction, $color: #222, $height: 6px, $width-left: $height, $width-right: $width-left){
     position: absolute;
@@ -309,12 +286,18 @@
 .ILS %currency:before { content: '\20AA'; }
 .GBP %currency:before { content: '\00A3'; }
 
-@mixin ghostVerticalAlign(){
+/* 
+*  @mixin ghost_vertical_align use css method to vertical center a bloc into div, using inline-block
+*  Child centered need to have: "display:inline-block; vertical-align:middle;"
+*  http://css-tricks.com/centering-in-the-unknown/
+*/
+@mixin ghost_vertical_align(){
     &:before {
         content: '';
         display: inline-block;
         vertical-align: middle;
-        height: 100%; width: .1px;
+        height: 100%; 
+        margin-right: -0.28em; // FF bug that need 0.28em instead 0.25em
     }
 }
 
@@ -332,12 +315,8 @@
     animation: $name $duration $iterations $timing-function $delay;
 }
 
-%enable-gpu{
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
+// Fix aliasing in webkit, ex: ugly font rendering when rotate element
+%webkit-antialiasing{ -webkit-transform: translate3d(0, 0, 0); }
 
 
 /* ==========================================================================

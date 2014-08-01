@@ -80,7 +80,7 @@ a.facebook-logo{
 a.letter-master{
     position: absolute;
     top: 0;
-    right: 58px;
+    right: 57px;
     height: 100%;
     padding: 0 20px;
     line-height: $header-top-height;
@@ -100,6 +100,7 @@ a.letter-master{
     width: 57px;
     height: 100%;
     text-align: center;
+    @extend %transition-bg;
     @include transition(right 0.2s linear);
 
     @include respond-to(minimobile) { 
@@ -109,9 +110,6 @@ a.letter-master{
     @include respond-to(mobile-desktop) { border-left: 1px solid $color3; }
     @include respond-to(mobile-tablet) { right: 65px; }
     @include respond-to(desktop) { right: 0; }
-
-    
-    @extend %transition-bg;
 
     &:hover, &.on{
         @include respond-to(minimobile) { background-color: rgba(#000, 0.4); }
@@ -155,10 +153,14 @@ a.letter-master{
 
         @include respond-to(minimobile) { top: 40px; }
         @include respond-to(mobile-desktop) { top: $header-top-height; }
+
+        .no-rgba &{ background-color: #000; }
     }
 
     li{
+        position: relative;
         height: 30px;
+        width: 57px;
         line-height: 30px;
 
         &:before{
@@ -289,7 +291,6 @@ a.letter-master{
         ul{
             position: relative;
             width: 100%;
-            @include box-sizing(border-box);
         }
 
         > ul{ padding: 0 20px; }
@@ -302,7 +303,7 @@ a.letter-master{
     }
 
     @include respond-to(desktop) {
-        height: $menu-height;
+        height: $menu-height !important;
         color: #000;
         text-align: center;
         display: block !important;
@@ -348,6 +349,8 @@ a.letter-master{
                     @include opacity(0);
                     @include transition(opacity 0.2s ease, top 0.2s ease);
                     z-index: 110;
+
+                    .lte-ie8 &{ left: 0; }
                 }
 
                 li{
@@ -360,6 +363,9 @@ a.letter-master{
                         padding: 0 20px;
                         left: -50%;
                         @extend %transition-bg;
+
+                        .no-rgba &{ background-color: $color1; }
+                        .lte-ie8 &{ left: 0; }
 
                         &:before{
                             position: relative;

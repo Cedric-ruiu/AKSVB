@@ -6,6 +6,7 @@ $(document).ready(function()
     /* ==========================================================================
        Slideshow
        ========================================================================== */
+
     if($('#slideshow').length)
     {
         if($('html').hasClass('lt-ie9'))
@@ -43,23 +44,23 @@ $(document).ready(function()
         $(menu_active).addClass('on');
     }
 
+    var method_menu_mobile = '';
     $('#control-menu-mobile').on('click', function() {
-        if($(this).hasClass('on'))
-        {
-            $('#header-menu').velocity("slideUp", { duration: 500 })
-        }
-        else
-        {
-            $('#header-menu').velocity("slideDown", { duration: 500 })
-        }
+        method_menu_mobile = ($(this).hasClass('on')) ? 'slideUp' : 'slideDown';
+        $('#header-menu').velocity(method_menu_mobile, { duration: 500 })
         $(this).toggleClass('on');
-        
-        //$('#header-menu').slideToggle();
     });
     
-     $('#control-lang').on('click', function() {
+    $('#control-lang').on('click', function() {
         $(this).toggleClass('on');
     });
+
+
+    /* ==========================================================================
+       FitVids - MAKE RESPONSIVE VIDEO
+       ========================================================================== */
+
+    $("#main").fitVids();
 
 
     /* ==========================================================================
@@ -109,7 +110,7 @@ $(document).ready(function()
         }
     });
 
-    // Ouvre automatiquement le marqueur
+    // Ouvre le marqueur au chargement de la page
     marker.infoWindow.open(marker.map, marker);
 
 
@@ -125,12 +126,56 @@ $(document).ready(function()
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
                     $('html,body').velocity(
-                        'scroll', {offset: target.offset().top, duration: 1000}
+                        'scroll', 
+                        {offset: target.offset().top, duration: 1000}
                     );
                 return false;
             }
         }
     });
+
+
+    /* ==========================================================================
+       VERTICALLY CENTER FLOATING DIV
+       ========================================================================== */
+
+    var current_height = 0;
+    var current_width  = 0;
+    var brother_height = 0;
+
+    $( window ).resize(function() {
+        parse_center_div_float();
+    });
+
+    parse_center_div_float();
+    
+    function parse_center_div_float()
+    {
+        $('.grid-center-l').each(function(){ center_div_float($(this), $(this).next()); });
+        $('.grid-center-r').each(function(){ center_div_float($(this), $(this).prev()); });
+    }
+    
+    function center_div_float(current, brother)
+    {
+        current_width = parseFloat(current.css('width')) + parseFloat(current.css('padding-left')) + parseFloat(current.css('padding-right'));
+        if(1 !== (current_width / parseFloat(current.parent().css('width'))) )
+        {
+            current_height = current.outerHeight();
+            brother_height = brother.outerHeight();
+            if(current_height < brother_height)
+            {
+                current.css('margin-top', ((brother_height - current_height) / 2) +'px' );
+            }
+            else
+            {
+                current.css('margin-top', 0);
+            }
+        }
+        else
+        {
+            current.css('margin-top', 0);
+        }
+    }
 
 });
 

@@ -1,12 +1,12 @@
 @import 'compass';
-$general-layout:smart;
-@import "general/*.png";
 @import 'components/ceaser-easing'; /* http://easings.net */
 
 @import 'components/normalize';
 @import 'components/var';
 @import 'components/helper';
 
+$general-layout:smart;
+@import "general/*.png";
 
 @import 'components/print';
 @import 'components/layout';
@@ -38,6 +38,9 @@ $general-layout:smart;
     .slide{ 
         position:relative;
         height: 100%; 
+        text-align: center;
+
+        @include ghost_vertical_align;
     }
 
     .slide-img{
@@ -56,70 +59,98 @@ $general-layout:smart;
 
     .slide-content{ 
         position: relative; 
+        display: inline-block;
+        max-width: 99%; // fix safari mobile
+        top: -20px;
+        vertical-align: middle;
         text-align: center;
         color: #fff;
+        
+
+        @include respond-to(minimobile) { padding: 0 10px; }
+        @include respond-to(mobile-desktop) { padding: 0 70px; }
+    }
+
+    h1.shadow, .shadow h1, h2.shadow, .shadow h2, p.shadow, .shadow p, a.shadow, .shadow a{
+        @include text-shadow(#000 1px 1px 4px, #000 2px 2px 4px, #000 3px 3px 4px);
+    }
+    .shadow .slide-img{
+        @include opacity(0.6);
     }
 
     h1{
         color: #fff;
+        margin: 0 0 10px 0;
 
-        @include respond-to(minimobile) {
-            margin: 50px 0 15px 0;
-            padding: 0;
-            font-size: 30px;
-            line-height: 1em;
-        }
-        @include respond-to(mobile) {
-            margin: 50px 0 0 0;
-            font-size: 40px;
-        }
-        @include respond-to(tablet) {
-            margin: 120px 0 0 0;
-            font-size: 60px; 
-        }
-        @include respond-to(desktop) { 
-            margin: 160px 0 0 0;
-            font-size: 80px;
-        }
-        @include respond-to(mobile-desktop) { 
-            padding: 0 60px;
-        }
+        @include respond-to(minimobile) { font-size: 30px; }
+        @include respond-to(mobile) { font-size: 40px; }
+        @include respond-to(tablet) { font-size: 60px; }
+        @include respond-to(desktop) { font-size: 80px; }
     }
 
     h2{
-        color: #ffffff;
+        color: #fff;
         margin: 5px 0;
 
-        @include respond-to(minimobile) { 
-            padding: 0;
-            margin: 0;
-            font-size: 15px;
-        }
-        @include respond-to(mobile) { font-size: 20px; }
-        @include respond-to(tablet) { font-size: 20px; }
+        @include respond-to(minimobile) { font-size: 15px; }
+        @include respond-to(mobile-tablet) { font-size: 20px; }
         @include respond-to(desktop) { font-size: 30px; }
-        @include respond-to(mobile-desktop) { padding: 0 60px; }
     }
 
     p{
         margin: 0;
         color: #fff;
         
-        @include respond-to(minimobile) { 
-            padding: 0;
-            font-size: 15px;
-        }
-        @include respond-to(mobile) { font-size: 20px; }
-        @include respond-to(tablet) { font-size: 20px; }
+        @include respond-to(minimobile) { font-size: 15px; }
+        @include respond-to(mobile-tablet) { font-size: 20px; }
         @include respond-to(desktop) { font-size: 30px; }
-        @include respond-to(mobile-desktop) { padding: 0 60px; }
     }
 
-    h1.shadow, h2.shadow, p.shadow, .shadow h1, .shadow h2, .shadow p{
-        @include text-shadow(#000 1px 1px 4px, #000 2px 2px 4px, #000 3px 3px 4px);
-    }
-    .shadow .slide-img{
-        @include opacity(0.6);
+    a{
+        font-size: 30px;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+
+        &.button{
+            display: inline-block;
+            color: #382b0e;
+            text-transform: uppercase;
+            border: 4px solid darken($color1, 30%);
+            background-color: $color1;
+            @include background-image(linear-gradient(bottom, $color1 0%, lighten($color1, 30%) 100%));
+            @include text-shadow(#fff 0px 0px 4px);
+            @include border-radius(10px);
+            @extend .font-bold;
+
+            @include respond-to(minimobile) { 
+                margin-top: 10px;
+                padding: 7px 10px;
+                font-size: 14px;
+                border: 2px solid rgba(#000, 0.5);
+                @include border-radius(5px);
+            }
+            @include respond-to(mobile) { 
+                margin-top: 15px;
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+            @include respond-to(tablet) { 
+                margin-top: 20px;
+                padding: 15px 20px;
+                font-size: 19px;
+            }
+            @include respond-to(desktop) { 
+                margin-top: 20px;
+                padding: 20px 27px;
+                font-size: 26.68px;
+            }
+
+            &:hover{ 
+                text-decoration: none;
+                background-color: darken($color1, 20%);
+                @include background-image(linear-gradient(bottom, darken($color1, 20%) 0%, $color1 100%));
+            }
+        }
     }
 }
 
@@ -165,14 +196,25 @@ $general-layout:smart;
         &:hover, &.active{ @include opacity(0.8); }
     }
 
-    a.bx-prev{
-        left: 0;
-        @include arrow(left, #000, 22px, 8px, 17px, 21px);
+    a.bx-prev{ left: 0; }
+    a.bx-next{ right: 0; }
+
+    .csstransforms &{
+        a.bx-prev{ @include arrow(left, #000, 22px, 8px, 17px, 21px); }
+        a.bx-next{ @include arrow(right, #000, 22px, 8px, 17px, 21px); }
     }
 
-    a.bx-next{ 
-        right: 0;
-        @include arrow(right, #000, 22px, 8px, 17px, 21px);
+    .no-csstransforms &{
+        a.bx-prev:after{
+            left: 17px;
+            top: 12px;
+            @include triangle(left, #000, 18px);
+        }
+        a.bx-next:after{ 
+            right: 17px;
+            top: 12px;
+            @include triangle(right, #000, 18px);
+        }
     }
 
     .bx-pager{
@@ -215,7 +257,6 @@ $general-layout:smart;
         background-color: transparent;
         border: 1px solid $color1;
         @include border-radius(3px);
-        @include box-sizing(border-box);
         @extend %transition-bg;
         
         &:hover{ background-color: rgba($color1, 0.5); }
@@ -242,23 +283,60 @@ $general-layout:smart;
 
 .main{
     position: relative;
+    margin-bottom: 20px;
+
+    .grid-parent{ clear: both; }
 
     img.img, .img{
         position: relative;
         max-width: 100%;
+        margin-top: 20px;
         border: 0;
         @include border-radius(5px);
     }
 
-    h1{
-        margin: 40px 0 0 0;
-        &:first-child{ margin-top: 0; }
+    h1{ 
+        margin: 40px 0 20px 0;
+        &:first-child{ margin: 20px 0; }
     }
+
+    h2{ margin: 20px 0 10px 0; }
 
     p{ 
         line-height: 1.6em;
         text-align: justify;
+        margin: 10px 0;
     }
+
+    .fluid-width-video-wrapper{ margin-top: 20px; } // youtube iframe div
+
+
+    //arrows for events
+    
+    /*.grid-container > div{ position: relative; } // allow positionning arrows event
+
+    .arrow-down, .arrow-up{
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background-color: $color1;
+        cursor: pointer;
+        @include opacity(1);
+        @include transition(opacity 0.2s linear);
+
+        &:hover{ @include opacity(0.5); }
+    }
+
+    .arrow-down{
+        right: 40px + $gutter-half;
+        @include arrow(bottom, #000, 15px, 5px, 16px, 17px);
+    }
+
+    .arrow-up{
+        right: $gutter-half;
+        @include arrow(top, #000, 15px, 5px, 16px, 19px);
+    }*/
 }
 
 
@@ -269,9 +347,66 @@ $general-layout:smart;
     @include image('ideogrammes.png');
     @include background-size(contain);
     background-position: center;
-    @extend .clearfix;
 
-    @include respond-to(minimobile) { margin: 65px auto; }
-    @include respond-to(mobile) { margin: 80px auto; }
-    @include respond-to(tablet-desktop) { margin: 100px auto; }
+    @include respond-to(minimobile) { margin: 65px auto 45px auto; }
+    @include respond-to(mobile) { margin: 80px auto 60px auto; }
+    @include respond-to(tablet-desktop) { margin: 100px auto 80px auto; }
+}
+
+/*div.hr-line + div > *:first-child{
+    margin-top: 0;
+}*/
+
+
+/* ==========================================================================
+   EVENT BOX
+   ========================================================================== */
+
+.events{
+    position: relative;
+    width: 100%;
+    color: $colorb;
+    background-color: $color1;
+    font-size: 16.02px;
+
+    ul{
+        position: relative;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    li{
+        position: relative;
+        width: 100%;
+        
+        list-style: none;
+        background-color: $color1;
+        border-top: 1px solid darken($color1, 13%);
+
+        &:first-child{ border: 0; }
+
+        @include respond-to(minimobile) { padding: 20px 0; }
+        @include respond-to(mobile-desktop) { padding: 20px 110px 20px 0; }
+    }
+
+    span{
+        padding: 7px 15px;
+        background-color: #fff;
+        font-size: 13.01px;
+        text-align: center;
+        @include border-radius(3px);
+
+        @include respond-to(minimobile) { 
+            position: relative;
+            display: block;
+            width: 110px;
+            margin: 0 auto 10px auto;
+        }
+
+        @include respond-to(mobile-desktop) {
+            position: absolute;
+            top: 14px;
+            right: 0;
+        }
+    }
 }
