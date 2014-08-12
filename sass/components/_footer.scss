@@ -15,7 +15,6 @@
     width: 100%;
     background-color: $color1;
     text-align: center;
-    @include box-shadow(rgba(0,0,0,0.8) 0 6px 5px -3px);
     z-index: 80;
     
     p{margin: 0;}
@@ -57,8 +56,10 @@
 .informations{
     position: relative;
     width: 100%;
+    z-index: 70;
     @extend .clearfix;
-    @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
+    //@include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
+    @include box-shadow(rgba(0,0,0,0.8) 0 6px 5px -3px);
 
     @include respond-to(mobiles) {
         text-align: center;
@@ -106,6 +107,29 @@
             display: inline-block;
             max-width: 300px;
         }
+    }
+}
+
+.proverbs{
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+
+    @extend .clearfix;
+    @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
+
+    p.proverb{
+        @extend .font-large;
+        text-align: center;
+        //font-style: italic;
+        &:before{ content: '《 '; font-style: italic; }
+        &:after{ content: ' 》'; font-style: italic; }
+    }
+
+    p.author{
+        text-align: right;
+        font-variant: small-caps;
+        margin-bottom: 0;
     }
 }
 

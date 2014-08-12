@@ -46,6 +46,7 @@ $general-layout:smart;
     .slide-img{
         position: absolute;
         display: block;
+        overflow: hidden;
         width: 100%;
         height: 100%;
         top: 0;
@@ -55,6 +56,21 @@ $general-layout:smart;
         @include background-size(cover);
         
         .lt-ie9 &{ background-size: 100%; }
+
+        &:after{
+            position: absolute;
+            display: block;
+            content: " ";
+            right: 0;
+            top: 0;
+            @include image('filigrane.png');
+            height: 100%;
+            background-position: center right;
+            @include background-size(contain);
+            /*@include respond-to(mobiles) { height: 300px; }
+            @include respond-to(tablet) { height: 500px; }
+            @include respond-to(desktop) { height: 620px; }*/
+        }
     }
 
     .slide-content{ 
@@ -340,7 +356,7 @@ $general-layout:smart;
 }
 
 
-.main hr, .hr{
+.main hr{
     position: relative;
     max-width: 100%;
     border: 0;
@@ -372,24 +388,29 @@ $general-layout:smart;
     ul{
         position: relative;
         margin: 0;
-        padding: 0 20px;
+        padding: 0 ;
     }
 
     li{
         position: relative;
         width: 100%;
-        
+        padding: 0 20px;
         list-style: none;
         background-color: $color1;
         border-top: 1px solid darken($color1, 13%);
-
+        padding-top: 20px;
+        padding-bottom: 20px;
+        cursor: pointer;
+        @extend %transition-bg;
+        
+        &:hover{ background-color: lighten($color1, 8%); }
         &:first-child{ border: 0; }
-
-        @include respond-to(minimobile) { padding: 20px 0; }
-        @include respond-to(mobile-desktop) { padding: 20px 110px 20px 0; }
+        &.empty{ cursor: default; }
+        &.empty:hover{ background-color: $color1; }
+        &.on .content{ display: block; }
     }
 
-    span{
+    .date{
         padding: 7px 15px;
         background-color: #fff;
         font-size: 13.01px;
@@ -406,7 +427,20 @@ $general-layout:smart;
         @include respond-to(mobile-desktop) {
             position: absolute;
             top: 14px;
-            right: 0;
+            right: 20px;
         }
+    }
+
+    .title{
+        @include respond-to(mobile-desktop) { padding-right: 110px; }
+    }
+
+    .content{
+        position: relative;
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.4em;
     }
 }

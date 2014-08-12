@@ -25,7 +25,7 @@ $(document).ready(function()
 
     /* ==========================================================================
         PLACEHOLDER SUPPORT
-    ========================================================================== */
+       ========================================================================== */
     
     // Ajoute la fonctionnalité placeholder des formulaires pour les navigateurs ne le supportant pas
     if(!Modernizr.input.placeholder)
@@ -36,7 +36,7 @@ $(document).ready(function()
 
     /* ==========================================================================
         MENU
-    ========================================================================== */
+       ========================================================================== */
 
     // Ajout d'une classe sur le boutton du menu correspondant à la page courante
     if(typeof(menu_active)!='undefined')
@@ -65,7 +65,7 @@ $(document).ready(function()
 
     /* ==========================================================================
         ADDITIONNAL EVENT BOX & FORM
-    ========================================================================== */
+       ========================================================================== */
 
     // Ferme le div parent lors d'un clique sur un bouton possédant la classe 'close'
     $('.close').on('click', function()
@@ -90,7 +90,7 @@ $(document).ready(function()
 
     /* ==========================================================================
         GMAPS
-    ========================================================================== */
+       ========================================================================== */
     
     // Instanciation de la carte
     var map = new GMaps({
@@ -136,6 +136,23 @@ $(document).ready(function()
 
 
     /* ==========================================================================
+        EVENTS
+       ========================================================================== */
+
+    var method_slide_event = '';
+    var c_event = null;
+    $('#events li:not(.empty)').on('click', function() {
+        c_event = $(this);
+        method_slide_event = (c_event.hasClass('on')) ? 'slideUp' : 'slideDown';
+        c_event.children('.content').velocity(method_slide_event, { duration: 500 });
+        c_event.toggleClass('on');
+    });
+});
+
+
+window.onload = function() 
+{
+    /* ==========================================================================
        VERTICALLY CENTER FLOATING DIV
        ========================================================================== */
 
@@ -176,7 +193,4 @@ $(document).ready(function()
             current.css('margin-top', 0);
         }
     }
-
-});
-
-
+}
