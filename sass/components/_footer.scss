@@ -58,7 +58,6 @@
     width: 100%;
     z-index: 70;
     @extend .clearfix;
-    //@include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
     @include box-shadow(rgba(0,0,0,0.8) 0 6px 5px -3px);
 
     @include respond-to(mobiles) {
@@ -157,6 +156,7 @@
         display: inline-block;
         bottom: 0;
         text-align: center;
+        text-decoration: none;
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -165,6 +165,8 @@
 
         &:hover{
             border-width: 0 86px 86px 86px;
+
+            p{ @include opacity(1); }
             .csstransforms &{
                 span:before, span:after{ background-color: $color2; }
             }
@@ -207,8 +209,15 @@
                     left: -9px;
                 }
             }
+        }
 
-            
+        p{
+            color: #000;
+            margin: 50px 0 0 -87.5px;
+            text-align: center;
+            width: 175px;
+            @include transition(opacity 0.5s linear);
+            @include opacity(0);
         }
     }
 }
