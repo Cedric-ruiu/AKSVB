@@ -67,9 +67,6 @@ $general-layout:smart;
             height: 100%;
             background-position: center right;
             @include background-size(contain);
-            /*@include respond-to(mobiles) { height: 300px; }
-            @include respond-to(tablet) { height: 500px; }
-            @include respond-to(desktop) { height: 620px; }*/
         }
     }
 
