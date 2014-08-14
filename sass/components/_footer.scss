@@ -112,15 +112,15 @@
 .proverbs{
     position: relative;
     width: 100%;
-    padding: 40px 0;
-
+    padding: 40px;
     @extend .clearfix;
     @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
+
+    @include respond-to(mobiles) { padding: 40px 20px; }
 
     p.proverb{
         @extend .font-large;
         text-align: center;
-        //font-style: italic;
         &:before{ content: '《 '; font-style: italic; }
         &:after{ content: ' 》'; font-style: italic; }
     }
