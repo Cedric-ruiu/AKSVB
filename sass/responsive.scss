@@ -27,7 +27,7 @@ $general-layout:smart;
 
 .slideshow{
     position: relative;
-    overflow: auto;
+    overflow: hidden; // remove scroll bar while loading bxslider
     @include respond-to(mobiles) { height: 300px; }
     @include respond-to(tablet) { height: 500px; }
     @include respond-to(desktop) { height: 620px; }
