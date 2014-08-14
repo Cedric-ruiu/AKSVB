@@ -238,3 +238,19 @@ a.headline, .headline{
     @extend %alert;
     background-color: $color-error;
 }
+
+
+/* ==========================================================================
+   BROWSER HAPPY
+   ========================================================================== */
+
+.browsehappy{
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    margin: 0;
+    background-color: $color1;
+    color: #000;
+    text-align: center;
+    @extend .font-bold;
+}
