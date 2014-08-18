@@ -404,7 +404,7 @@ $general-layout:smart;
         &:first-child{ border: 0; }
         &.empty{ cursor: default; }
         &.empty:hover{ background-color: $color1; }
-        &.on .content{ display: block; }
+        &.on .content, .no-js & .content{ display: block; }
     }
 
     .date{

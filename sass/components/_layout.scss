@@ -76,6 +76,12 @@ input[type="text"], input[type="email"]{
     line-height: 40px;
     padding: 0 20px;
     background-color: $colorw;
+
+    // Fix placeholder in Android 4.1
+    @include placeholder {
+        height: 40px;
+        line-height: 40px;
+    }
 }
 
 input[type="submit"]{

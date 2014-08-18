@@ -28,7 +28,7 @@
 
     @include respond-to(minimobile) { 
         height: 60px; 
-        margin-bottom: 40px;
+        .js &{ margin-bottom: 40px; }
     }
     @include respond-to(mobile-desktop) { height: $header-top-height; }
 
@@ -49,6 +49,8 @@
         top: 60px;
         background-color: $color1;
         @include box-shadow(rgba(0,0,0,0.8) 0px 2px 5px);
+
+        .no-js &{ display: none; }
     }
     @include respond-to(mobile-desktop) { 
         height: $header-top-height;
@@ -103,6 +105,9 @@ a.letter-master{
     @extend %transition-bg;
     @include transition(right 0.2s linear);
 
+    @include respond-to(mobility) { 
+        .no-js &{ display: none; }
+    }
     @include respond-to(minimobile) { 
         left: 0;
         border-right: 1px solid rgba(#000, 0.4);
@@ -195,6 +200,10 @@ a.letter-master{
     cursor: pointer;
     @extend %transition-bg;
 
+    @include respond-to(mobility) { 
+        .no-js &{ display: none; }
+    }
+
     span{
         position: absolute;
         width: 24px;
@@ -241,14 +250,13 @@ a.letter-master{
             background-color: transparent;
 
             &:before{ 
-                top: 0px;
+                top: 0px !important; // '!important' fix bug in android 4.1
                 @include rotate(45deg);
             }
             &:after{
-                top: 0px;
+                top: 0px !important; // '!important' fix bug in android 4.1
                 @include rotate(-45deg);
             }
-
         }
     }
 }
@@ -284,7 +292,7 @@ a.letter-master{
     @include respond-to(minimobile) { border-top: 1px solid rgba(#000, 0.4); }
 
     @include respond-to(mobility) {
-        display: none;
+        .js &{ display: none; }
         color: #000;
         text-align: left;
 

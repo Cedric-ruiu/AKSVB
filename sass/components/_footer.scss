@@ -51,11 +51,14 @@
         }
         p{ margin:0; }
     }
+
+    .no-js &{ display: none; }
 }
 
 .informations{
     position: relative;
     width: 100%;
+    padding-top: 50px;
     z-index: 70;
     @extend .clearfix;
     @include box-shadow(rgba(0,0,0,0.8) 0 6px 5px -3px);
@@ -69,7 +72,6 @@
         }
     }
 
-    
     p{ 
         margin: 0;
 
@@ -92,10 +94,8 @@
         }
     }
 
-    .line{ 
-        @include respond-to(tablet-desktop) { margin-bottom: 40px; }
-        
-        &:first-child{ margin-top: 50px; }
+    @include respond-to(tablet-desktop) { 
+        .line{ margin-bottom: 40px; }
     }
 
     .ffwushu{
@@ -114,9 +114,10 @@
     width: 100%;
     padding: 40px;
     @extend .clearfix;
-    @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px);
 
     @include respond-to(mobiles) { padding: 40px 20px; }
+
+    .js &{ @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px); }
 
     p.proverb{
         @extend .font-large;
@@ -140,6 +141,7 @@
     color: #fff;
     font-size: 12px;
     text-align: center;
+    overflow: hidden;
     @extend .clearfix;
 
     p{ margin: 35px 0 0 0; }
@@ -178,7 +180,7 @@
         span{
             display: block;
 
-            .no-csstransforms &{
+            .no-js &, .no-csstransforms &{
                 left: 50%;
                 margin: 0 0 0 -12px;
                 position: relative;
