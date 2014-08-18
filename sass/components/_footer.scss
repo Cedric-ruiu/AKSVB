@@ -168,7 +168,7 @@
         &:hover{
             border-width: 0 86px 86px 86px;
 
-            p{ @include opacity(1); }
+            p{ @extend %opacity-show; }
             .csstransforms &{
                 span:before, span:after{ background-color: $color2; }
             }
@@ -219,7 +219,7 @@
             text-align: center;
             width: 175px;
             @include transition(opacity 0.5s linear);
-            @include opacity(0);
+            @extend %opacity-hide;
         }
     }
 }

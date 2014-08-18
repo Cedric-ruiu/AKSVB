@@ -1,0 +1,16 @@
+/* ==========================================================================
+   EFFECTS
+   ========================================================================== */
+
+%transition-bg{ @include transition(background-color 0.1s linear); }
+%transition-opacity{ @include transition(opacity 0.2s linear); }
+
+%border-radius-normal{ @include border-radius(3px); }
+%border-radius-big{ @include border-radius(5px); }
+
+%opacity-hide{ @include opacity(0); }
+%opacity-show{ @include opacity(1); }
+
+/* ==========================================================================
+   UI
+   ========================================================================== */

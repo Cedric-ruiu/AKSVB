@@ -123,7 +123,7 @@ a.letter-master{
         ul{ 
             width: 57px;
             overflow: visible;
-            @include opacity(1); 
+            @extend %opacity-show;
         }
     }
 
@@ -147,11 +147,11 @@ a.letter-master{
 
     ul{
         position: absolute;
-        @include opacity(0);
         overflow: hidden;
-        @include transition(opacity 0.2s linear);
         width: 0;
         right: 0;
+        @extend %transition-opacity;
+        @extend %opacity-hide;
         background-color: rgba(#000, 0.7);
         font-size: 14px;
         z-index: 200;
@@ -355,7 +355,8 @@ a.letter-master{
                     width: 0;
                     overflow: hidden;
                     @include opacity(0);
-                    @include transition(opacity 0.2s ease, top 0.2s ease);
+                    @extend %transition-opacity;
+                    @include transition(top 0.2s ease);
                     z-index: 110;
 
                     .lte-ie8 &{ left: 0; }

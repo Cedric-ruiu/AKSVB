@@ -8,17 +8,11 @@
 $general-layout:smart;
 @import "general/*.png";
 
+@import 'components/ui-effects';
 @import 'components/print';
 @import 'components/layout';
 @import 'components/header';
 @import 'components/footer';
-
-
-/* ==========================================================================
-   TRANSITIONS THEME
-   ========================================================================== */
-
-%transition-bg{ @include transition(background-color 0.1s linear); }
 
 
 /* ==========================================================================
@@ -84,11 +78,9 @@ $general-layout:smart;
         @include respond-to(mobile-desktop) { padding: 0 70px; }
     }
 
-    h1.shadow, .shadow h1, h2.shadow, .shadow h2, p.shadow, .shadow p, a.shadow, .shadow a{
+    .shadow{
         @include text-shadow(#000 1px 1px 4px, #000 2px 2px 4px, #000 3px 3px 4px);
-    }
-    .shadow .slide-img{
-        @include opacity(0.6);
+        .slide-img{ @include opacity(0.6); }
     }
 
     h1{
@@ -199,8 +191,8 @@ $general-layout:smart;
         overflow: visible;
         background-color: $color1;
         @extend .hide-text;
-        @include opacity(1);
-        @include transition(opacity 0.2s linear);
+        @extend %transition-opacity;
+        @extend %opacity-show;
 
         @include respond-to(desktop) { top: 280px; }
         @include respond-to(tablet) { top: 220px; }
@@ -269,7 +261,7 @@ $general-layout:smart;
         height: 20px;
         background-color: transparent;
         border: 1px solid $color1;
-        @include border-radius(3px);
+        @extend %border-radius-normal;
         @extend %transition-bg;
         
         &:hover{ background-color: rgba($color1, 0.5); }
@@ -305,7 +297,7 @@ $general-layout:smart;
         max-width: 100%;
         margin-top: 20px;
         border: 0;
-        @include border-radius(5px);
+        @extend %border-radius-big;
     }
 
     h1{ 
@@ -412,7 +404,7 @@ $general-layout:smart;
         background-color: #fff;
         font-size: 13.01px;
         text-align: center;
-        @include border-radius(3px);
+        @extend %border-radius-normal;
 
         @include respond-to(minimobile) { 
             position: relative;

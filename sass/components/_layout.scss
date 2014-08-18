@@ -62,13 +62,12 @@ input, textarea{
     padding: 0;
     -webkit-appearance: none;
     -webkit-focus-ring-color: none;
-    @include border-radius(0);
     &:focus{ outline: none; }
 
     position: relative;
     width: 100%;
     border: 0;
-    @include border-radius(3px);
+    @extend %border-radius-normal;
 }
 
 input[type="text"], input[type="email"]{
@@ -232,7 +231,7 @@ a.headline, .headline{
     padding: 14px 20px;
     margin: 0 0 20px 0;
     color: #fff;
-    @include border-radius(3px);
+    @extend %border-radius-normal;
 }
 
 .alert-success{
