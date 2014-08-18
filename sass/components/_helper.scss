@@ -65,11 +65,7 @@
    MY Helper classes (Several taken from Twitter Bootstrap 2.2.2)
    ========================================================================== */
 
-.center *{text-align: center;}
-
-.clear{clear: both;}
-
-.show { display: block; }
+.clear{ clear: both; }
 
 .pull-right { float: right; }
 .pull-left { float: left; }
@@ -95,12 +91,13 @@
     visibility: hidden;
 }
 
-.aleft    { text-align: left; }
+.center *{text-align: center;}
 .acenter  { text-align: center; }
+.aleft    { text-align: left; }
 .aright   { text-align: right; }
 .ajustify { text-align: justify; }
 .uppercase  { text-transform: uppercase; }
-.small-caps { text-transform: small-caps; }
+.small-caps { font-variant: small-caps; }
 
 /* include image path & dimension */
 @mixin image($name){
@@ -307,57 +304,3 @@
 
 // Fix aliasing in webkit, ex: ugly font rendering when rotate element
 %webkit-antialiasing{ -webkit-transform: translate3d(0, 0, 0); }
-
-
-/* ==========================================================================
-   RESPONSIVE HELPER
-   ========================================================================== */
-
-/* Use like : @include respond-to(mobile) { width: 100% ;} */
-@mixin respond-to($media) {
-    @if $media == minimobile {
-        @media only screen and (max-width: $media-minimobile-max) { @content; }
-    }
-    @else if $media == mobile {
-        @media only screen and (min-width: $media-mobile-min) and (max-width: $media-mobile-max) { @content; }
-    }
-    @else if $media == mobiles {
-        @media only screen and (max-width: $media-mobile-max) { @content; }
-    }
-    @else if $media == tablet {
-        @media only screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) { @content; }
-    }
-    @else if $media == mobile-tablet {
-        @media only screen and (min-width: $media-mobile-min) and (max-width: $media-tablet-max) { @content; }
-    }
-    @else if $media == mobility {
-        @media only screen and (max-width: $media-tablet-max) { @content; }
-    }
-    @else if $media == desktop {
-        @media only screen and (min-width: $media-desktop-min) { @content; }
-    }
-    @else if $media == tablet-desktop {
-        @media only screen and (min-width: $media-tablet-min) { @content; }
-    }
-    @else if $media == mobile-desktop {
-        @media only screen and (min-width: $media-mobile-min) { @content; }
-    }
-}
-
-@include respond-to(minimobile) { 
-    .hide-on-minimobile{
-        display: none !important;
-    }
-}
-
-@include respond-to(mobiles) { 
-    .hide-on-mobiles{
-        display: none !important;
-    }
-}
-
-@include respond-to(mobility) { 
-    .hide-on-mobility{
-        display: none !important;
-    }
-}

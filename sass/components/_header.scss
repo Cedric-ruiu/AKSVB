@@ -5,6 +5,8 @@
     @include box-shadow(rgba(0,0,0,0.8) 0px 2px 5px);
 
     ul{ 
+        text-align: center;
+        line-height: normal;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -166,6 +168,7 @@ a.letter-master{
         position: relative;
         height: 30px;
         width: 57px;
+        margin: 0;
         line-height: 30px;
 
         &:before{
@@ -289,6 +292,8 @@ a.letter-master{
         &:hover, &.on{ color: $color2; }
     }
 
+    li{ margin:0; }
+
     @include respond-to(minimobile) { border-top: 1px solid rgba(#000, 0.4); }
 
     @include respond-to(mobility) {
@@ -299,6 +304,7 @@ a.letter-master{
         ul{
             position: relative;
             width: 100%;
+            text-align: left;
         }
 
         > ul{ padding: 0 20px; }
@@ -307,6 +313,10 @@ a.letter-master{
             position: relative;
             width: 100%;
             
+            li{ 
+                font-size: 16px;
+                text-indent: 20px; 
+            }
         }
     }
 
