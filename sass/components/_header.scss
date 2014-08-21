@@ -75,7 +75,7 @@ a.facebook-logo{
     &:after{
         position: absolute;
         content: " ";
-        @include mysprite(facebook-logo-y);
+        @include use-sprite(facebook-logo-y);
         top: 40px;
         left: 20px;
     }

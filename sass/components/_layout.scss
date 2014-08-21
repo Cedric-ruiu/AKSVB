@@ -198,17 +198,17 @@ table{
 
 .logo-aksvb-y{
     position: relative;
-    @include mysprite(aksvb-logo-y);
+    @include use-sprite(aksvb-logo-y);
 }
 
 .logo-aksvb-b{
     position: relative;
-    @include mysprite(aksvb-logo-b);
+    @include use-sprite(aksvb-logo-b);
 }
 
 .aksvb-logo-min-r{
     position: relative;
-    @include mysprite(aksvb-logo-min-r);
+    @include use-sprite(aksvb-logo-min-r);
 }
 
 
@@ -267,8 +267,8 @@ a.headline, .headline{
     }
 
     @include respond-to(minimobile) {
-        .logo-aksvb-y{ @include mysprite(aksvb-logo-min-y); }
-        .logo-aksvb-b{ @include mysprite(aksvb-logo-min-b); }
+        .logo-aksvb-y{ @include use-sprite(aksvb-logo-min-y); }
+        .logo-aksvb-b{ @include use-sprite(aksvb-logo-min-b); }
     }
 }
 

@@ -2,7 +2,9 @@
 @import 'components/ceaser-easing'; /* http://easings.net */
 @import 'components/tablesaw.stackonly'; /* https://github.com/filamentgroup/tablesaw */
 
-@import 'components/normalize';
+@import 'components/normalize'; /* https://github.com/necolas/normalize.css/ */
+@import 'components/retina-sprite/retina-sprites'; /* https://github.com/Gaya/Retina-Sprites-for-Compass */
+//@import 'components/retina-sprite/retina-background-image'; /* https://github.com/Gaya/Retina-Sprites-for-Compass */
 @import 'components/var';
 @import 'components/helper';
 @import 'components/grid';

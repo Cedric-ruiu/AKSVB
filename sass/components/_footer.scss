@@ -147,10 +147,10 @@
     p{ margin: 35px 0 0 0; }
 
     .opla-logo{
+        @include use-sprite('opla-logo');
         position: relative;
         display: inline-block;
         top: 4px;
-        @include mysprite('opla-logo');
     }
 
     .top{
@@ -169,7 +169,7 @@
             &:hover{
                 border-width: 0 86px 86px 86px;
 
-                p{ @extend %opacity-show; }
+                p{ @include opacity(1); }
                 .csstransforms &{
                     span:before, span:after{ background-color: $color2; }
                 }
@@ -178,6 +178,7 @@
                 }
             }
         }
+        
 
         span{
             display: block;
