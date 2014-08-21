@@ -105,12 +105,22 @@ textarea{
    ========================================================================== */
 
 ul{
+    list-style: none;
     line-height: 1.4em;
     text-align: justify;
+    padding-left: 17px;
+    margin-top: 10px;
 
     li{ 
         margin-top: 5px; 
         &:first-child{ margin-top: 0; }
+
+        &:before{
+            position: absolute;
+            content: "• ";
+            color: $colorb;
+            margin-left: -12px;
+        }
     }
 }
 
@@ -122,9 +132,21 @@ ul{
 .table-container{
     position: relative;
     width: 100%;
-    overflow: auto;
+    @include tablesaw-stack( $media-minimobile-max );
 
-    table{ min-width: 540px; }
+    .tablesaw-stack td .tablesaw-cell-label, .tablesaw-stack th .tablesaw-cell-label{
+        display: block;
+    }
+
+    @include respond-to(minimobile) { 
+        border-bottom: 1px solid darken($color1, 10%);
+
+        td{
+            border-right: 1px solid darken($color1, 10%);
+            &:first-child{ border-left: 1px solid darken($color1, 10%); }
+        }
+        tr td:first-child{ background-color: $color1; }
+    }
 }
 
 table{
@@ -159,6 +181,11 @@ table{
         @include respond-to(minimobile) { padding: 10px 5px; }
 
         &:first-child{ border-left: 0; }
+    }
+
+    ul{
+        padding-left: 10px;
+        &:first-child{ margin-top: 0; }
     }
 }
 

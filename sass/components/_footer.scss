@@ -165,15 +165,17 @@
         @include triangle(top, $colorw, 43px);
         @include transition(all 0.5s ceaser($easeInOutBack));
 
-        &:hover{
-            border-width: 0 86px 86px 86px;
+        @include respond-to(desktop) { 
+            &:hover{
+                border-width: 0 86px 86px 86px;
 
-            p{ @extend %opacity-show; }
-            .csstransforms &{
-                span:before, span:after{ background-color: $color2; }
-            }
-            .no-csstransforms &{
-                span{ @include triangle(top, $color2, 12px); }
+                p{ @extend %opacity-show; }
+                .csstransforms &{
+                    span:before, span:after{ background-color: $color2; }
+                }
+                .no-csstransforms &{
+                    span{ @include triangle(top, $color2, 12px); }
+                }
             }
         }
 

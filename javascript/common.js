@@ -165,10 +165,12 @@ window.onload = function()
     function center_div_float(current, brother)
     {
         current_width = parseFloat(current.css('width')) + parseFloat(current.css('padding-left')) + parseFloat(current.css('padding-right'));
-        if(1 !== (current_width / parseFloat(current.parent().css('width'))) )
+        parent_width = parseFloat(current.parent().css('width')) + parseFloat(current.parent().css('padding-left')) + parseFloat(current.parent().css('padding-right'));
+        if(1 > (current_width / parseFloat(current.parent().css('width'))) )
         {
             current_height = current.outerHeight();
             brother_height = brother.outerHeight();
+
             if(current_height < brother_height)
             {
                 current.css('margin-top', ((brother_height - current_height) / 2) +'px' );

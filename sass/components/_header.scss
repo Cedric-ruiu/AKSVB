@@ -292,7 +292,10 @@ a.letter-master{
         &:hover, &.on{ color: $color2; }
     }
 
-    li{ margin:0; }
+    li{ 
+        margin:0;
+        &:before{ display: none; }
+    }
 
     @include respond-to(minimobile) { border-top: 1px solid rgba(#000, 0.4); }
 

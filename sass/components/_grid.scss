@@ -13,10 +13,10 @@ $media-mobile-min     : 670px;
 // Unsemantic config
 $media-mobile-max     : 896px;
 $media-tablet-min     : 897px;
-$media-tablet-max     : 1199px;
-$media-desktop-min    : 1200px;
-$container-max-width  : 1200px;
-$gutter-half          : 10px;
+$media-tablet-max     : 1239px;
+$media-desktop-min    : 1240px;
+$container-max-width  : 1240px;
+$gutter-half          : 20px;
 
 $unsemantic-ie7-support: false;
 
@@ -114,4 +114,9 @@ $unsemantic-ie7-support: false;
 
 @include respond-to(desktop) { 
     .show-only-desktop{ display: block !important; }
+}
+
+.grid-container{
+    padding-left: 0;
+    padding-right: 0;
 }
