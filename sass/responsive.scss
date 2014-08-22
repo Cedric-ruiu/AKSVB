@@ -4,13 +4,12 @@
 
 @import 'components/normalize'; /* https://github.com/necolas/normalize.css/ */
 @import 'components/retina-sprite/retina-sprites'; /* https://github.com/Gaya/Retina-Sprites-for-Compass */
-//@import 'components/retina-sprite/retina-background-image'; /* https://github.com/Gaya/Retina-Sprites-for-Compass */
 @import 'components/var';
 @import 'components/helper';
 @import 'components/grid';
 
-$general-layout:smart;
-@import "general/*.png";
+/*$general-layout:smart;
+@import "general/*.png";*/
 
 @import 'components/ui-effects';
 @import 'components/print';

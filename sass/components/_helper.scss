@@ -100,16 +100,21 @@
 .small-caps { font-variant: small-caps; }
 
 /* include image path & dimension */
-@mixin image($name){
-    background: image-url($name) no-repeat 0 0 transparent;
-    width: image-width($name);
-    height: image-height($name);
-}
+@mixin image($image, $retina: false, $contain: false){
+    background: image-url($image) no-repeat 0 0 transparent;
+    width: image-width($image);
+    height: image-height($image);
+    @if $retina != false {
+        @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+            background-image: image-url($retina);
 
-@mixin mysprite($name){
-    @include general-sprite($name);
-    width: general-sprite-width($name);
-    height: general-sprite-height($name);
+            @if $contain == true {
+                background-size: contain;
+            } @else {
+                background-size: (image-width($retina) / 2) (image-height($retina) / 2);
+            }
+        }
+    }
 }
 
 @mixin placeholder {
