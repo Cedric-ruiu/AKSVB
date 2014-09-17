@@ -398,6 +398,8 @@
     background-color: $color1;
     font-size: 16.02px;
 
+    > ul > li:before{ content: " "; }
+
     ul{
         position: relative;
         margin: 0;
