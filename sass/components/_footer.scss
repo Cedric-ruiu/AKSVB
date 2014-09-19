@@ -154,7 +154,9 @@
     }
 
     .top{
-        position: absolute;
+        @include triangle(top, darken($colorw, 10), 43px);
+        @include transition(all 0.5s ceaser($easeInOutBack));
+        position: fixed;
         display: inline-block;
         bottom: 0;
         text-align: center;
@@ -162,8 +164,7 @@
         margin: 0 auto;
         left: 0;
         right: 0;
-        @include triangle(top, $colorw, 43px);
-        @include transition(all 0.5s ceaser($easeInOutBack));
+        z-index: 100;
 
         @include respond-to(desktop) { 
             &:hover{
