@@ -2,14 +2,21 @@
    EFFECTS
    ========================================================================== */
 
-%transition-bg{ @include transition(background-color 0.1s linear); }
-%transition-opacity{ @include transition(opacity 0.2s linear); }
+@mixin transition-bg{ @include transition(background-color 0.1s linear); }
+%transition-bg{ @include transition-bg; }
+@mixin transition-opacity{ @include transition(opacity 0.2s linear); }
+%transition-opacity{ @include transition-opacity; }
 
-%border-radius-normal{ @include border-radius(3px); }
-%border-radius-big{ @include border-radius(5px); }
+@mixin border-radius-normal{ @include border-radius(3px); }
+%border-radius-normal{ @include border-radius-normal; }
+@mixin border-radius-big{ @include border-radius(5px); }
+%border-radius-big{ @include border-radius-big; }
 
-%opacity-hide{ @include opacity(0); }
-%opacity-show{ @include opacity(1); }
+@mixin opacity-hide{ @include opacity(0); }
+%opacity-hide{ @include opacity-hide; }
+@mixin opacity-show{ @include opacity(1); }
+%opacity-show{ @include opacity-show; }
+
 
 /* ==========================================================================
    UI
