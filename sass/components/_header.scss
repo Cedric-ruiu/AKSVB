@@ -328,6 +328,7 @@ a.letter-master{
         color: #000;
         text-align: center;
         display: block !important;
+        font-size: 0;
 
         > ul{
             position: relative;
@@ -341,6 +342,7 @@ a.letter-master{
                 margin: 0;
                 text-align: center;
                 cursor: default;
+                font-size: 20.03px;
 
                 &:first-child{ border-left: 1px solid #000; }
 

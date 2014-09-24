@@ -118,19 +118,6 @@
     @include respond-to(mobiles) { padding: 40px 20px; }
 
     .js &{ @include box-shadow(rgba(0,0,0,0.8) 0 -6px 5px -3px); }
-
-    p.proverb{
-        @extend .font-large;
-        text-align: center;
-        &:before{ content: '《 '; font-style: italic; }
-        &:after{ content: ' 》'; font-style: italic; }
-    }
-
-    p.author{
-        text-align: right;
-        font-variant: small-caps;
-        margin-bottom: 0;
-    }
 }
 
 .credits{

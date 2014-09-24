@@ -307,5 +307,5 @@ a.headline, .headline{
     background-color: $color1;
     color: #000;
     text-align: center;
-    @extend .font-bold;
+    @extend .font-title;
 }

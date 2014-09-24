@@ -335,34 +335,6 @@
     ul:last-child{ margin-bottom: 0; }
 
     .fluid-width-video-wrapper{ margin-top: 20px; } // youtube iframe div
-
-
-    //arrows for events
-    
-    /*.grid-container > div{ position: relative; } // allow positionning arrows event
-
-    .arrow-down, .arrow-up{
-        position: absolute;
-        top: 0;
-        width: 40px;
-        height: 40px;
-        background-color: $color1;
-        cursor: pointer;
-        @include opacity(1);
-        @include transition(opacity 0.2s linear);
-
-        &:hover{ @include opacity(0.5); }
-    }
-
-    .arrow-down{
-        right: 40px + $gutter-half;
-        @include arrow(bottom, #000, 15px, 5px, 16px, 17px);
-    }
-
-    .arrow-up{
-        right: $gutter-half;
-        @include arrow(top, #000, 15px, 5px, 16px, 19px);
-    }*/
 }
 
 .hr-line{
@@ -382,9 +354,18 @@
     }
 }
 
-/*div.hr-line + div > *:first-child{
-    margin-top: 0;
-}*/
+p.proverb{
+    @extend .font-large;
+    text-align: center;
+    &:before{ content: '《 '; font-style: italic; }
+    &:after{ content: ' 》'; font-style: italic; }
+}
+
+p.author{
+    text-align: right;
+    font-variant: small-caps;
+    margin-bottom: 0;
+}
 
 
 /* ==========================================================================
@@ -458,4 +439,16 @@
         font-size: 14px;
         line-height: 1.4em;
     }
+}
+
+
+/* ==========================================================================
+   LETTRE OUVERTE
+   ========================================================================== */
+
+p.title-num{
+    @extend .font-bold;
+    margin-top: 30px;
+
+    &:first-child{ margin-top: 0; }
 }
