@@ -55,7 +55,7 @@
                         <div id="control-menu-mobile" class="control-menu-mobile hide-on-desktop"><span></span></div>
 
                         <!-- Nécessite le lien. En ajoutant la class 'on' le lien se rendra actif comme en :hover -->
-                        <a href="#" class="letter-master hide-on-mobility">Lettre ouverte du maître</a>
+                        <a id="m-lettre-ouverte" href="#" class="letter-master hide-on-mobility">Lettre ouverte du maître</a>
                     
                         <div id="control-lang" class="lang-menu">
                             <p>FR</p><!-- Langue courante -->
@@ -80,14 +80,14 @@
                 <div id="header-menu" class="header-menu">
                     <ul>
                         <li>
-                            <a href="#">L'école</a>
+                            <a id="m-ecole" href="#">L'école</a>
                             <ul>
                                 <li><a href="#m-maitre">Le Maître</a></li>
                                 <li><a href="#m-ecole-aksvb">AKSVB Strasbourg</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Cours</a>
+                            <a id="m-cours" href="#">Cours</a>
                             <ul>
                                 <li><a href="#m-cours-enfants">Cours Enfants</a></li>
                                 <li><a href="#m-cours-adultes">Cours Adultes</a></li>
@@ -95,7 +95,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Disciplines</a>
+                            <a id="m-discipline" href="#">Disciplines</a>
                             <ul>
                                 <li><a href="#m-kung-fu-adultes">Kung Fu ADULTES</a></li>
                                 <li><a href="#m-kung-fu-enfants">Kung Fu ENFANTS</a></li>
@@ -104,10 +104,10 @@
                                 <li><a href="#m-acrobaties">Acrobaties</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Inscriptions</a></li>
-                        <li><a href="#">Démonstrations</a></li>
-                        <li><a href="#m-contact">Contact</a></li>
-                        <li><a href="#">Culture</a></li>
+                        <li><a id="m-inscriptions" href="#">Inscriptions</a></li>
+                        <li><a id="m-demonstrations" href="#">Démonstrations</a></li>
+                        <li><a id="m-contact" href="#m-contact">Contact</a></li>
+                        <li><a id="m-culture" href="#">Culture</a></li>
                     </ul>
                 </div>
                 
@@ -795,6 +795,8 @@
                 </div>
             </div>
 
+            <script>menu_active = '#m-cours';</script>
+            <!--<script>menu_active = '#m-lettre-ouverte';</script>-->
 
             <!-- =========================================================================
                 FOOTER
