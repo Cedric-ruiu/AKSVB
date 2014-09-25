@@ -75,6 +75,7 @@ $(document).ready(function()
     // Instanciation de la carte
     var map = new GMaps({
         scrollwheel: false,
+        draggable: false,
         div: '#gmaps',
         lat: 48.5680081,
         lng: 7.7551335
