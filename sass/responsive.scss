@@ -359,6 +359,8 @@ p.proverb{
     text-align: center;
     &:before{ content: '《 '; font-style: italic; }
     &:after{ content: ' 》'; font-style: italic; }
+    .lte-ie8 &:before{ content: '« '; font-style: italic; }
+    .lte-ie8 &:after{ content: ' »'; font-style: italic; }
 }
 
 p.author{
