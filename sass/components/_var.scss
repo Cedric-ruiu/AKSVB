@@ -32,11 +32,17 @@ $font-regular:  'Museo300Regular', Verdana, sans-serif;
 $font-bold:     'Museo700Regular', Verdana, sans-serif;
 $font-large:    'Kaushan Script', Verdana, cursive, sans-serif;
 
-.font-title{    font-family: $font-title; font-weight: 700; }
+%vn-adapt{
+    .vn &{
+        font-family: $font-regular;
+    }
+}
+
+.font-title{    font-family: $font-title; font-weight: 700; @extend %vn-adapt; }
 .font-subtitle{ font-family: $font-subtitle; font-weight: 300; }
 .font-regular{  font-family: $font-regular; font-weight: normal; }
-.font-bold{     font-family: $font-bold; font-weight: normal; font-size: 16.5px; } // font-size fix ugly typo rendering (FF/webkit)
-.font-large{    font-family: $font-large; font-weight: 400; }
+.font-bold{     font-family: $font-bold; font-weight: normal; font-size: 16.5px; @extend %vn-adapt; } // font-size fix ugly typo rendering (FF/webkit)
+.font-large{    font-family: $font-large; font-weight: 400; @extend %vn-adapt; }
 
 
 /* ==========================================================================
