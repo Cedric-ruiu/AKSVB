@@ -361,6 +361,8 @@ p.proverb{
     &:after{ content: ' 》'; font-style: italic; }
     .lte-ie8 &:before{ content: '« '; font-style: italic; }
     .lte-ie8 &:after{ content: ' »'; font-style: italic; }
+
+    .vi &{ font-family: $font-large; font-weight: 400; } // Police exception for vi lang
 }
 
 p.author{
